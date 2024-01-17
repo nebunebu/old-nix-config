@@ -30,8 +30,8 @@
           src = pkgs.fetchFromGitHub{
             owner = "rose-pine";
             repo = "tmux";
-            rev = "9c7b4589ccf2062f61b6ca1943ec8b0cad00bc47";
-            sha256 = "sha256-5mt4AHbuMz2XpGR6r0WK15PVuhUs8+Q8Dk0Cdiw3gtI=";
+            rev = "dd6d01338ac4afeb96542dcf24e4a7fe179b69e6";
+            sha256 = "sha256-Tccb4VjdotOSw7flJV4N0H4557NxRhXiCecZBPU9ICQ=";
           };
         rtpFilePath = "rose-pine.tmux";
         };

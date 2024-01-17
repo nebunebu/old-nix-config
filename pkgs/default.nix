@@ -2,5 +2,5 @@
 # You can build them using 'nix build .#example'
 pkgs: {
   # example = pkgs.callPackage ./example { };
-  locatefile = pkgs.callPackage ./locatefile.nix { };
+  trekscii = pkgs.callPackage ./trekscii { };
 }
