@@ -6,7 +6,7 @@
 
   imports = [
     inputs.nix-colors.homeManagerModules.default
-    ./term/default.nix
+    ./non-gui/default.nix
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.rose-pine;
@@ -15,6 +15,7 @@
     username = "nebu";
     homeDirectory = "/home/nebu";
     packages = with pkgs; [
+      nix-prefetch-github
       (nerdfonts.override { fonts = [
         "DroidSansMono"
         "JetBrainsMono"
