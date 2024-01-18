@@ -39,20 +39,10 @@
     ];
     forAllSystems = nixpkgs.lib.genAttrs systems;
   in {
-    # Your custom packages
-    # Accessible through 'nix build', 'nix shell', etc
-   packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
-    # Formatter for your nix files, available through 'nix fmt'
-    # Other options beside 'alejandra' include 'nixpkgs-fmt'
-   formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
-
-    # Your custom packages and modifications, exported as overlays
+    packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
+    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
     overlays = import ./overlays {inherit inputs;};
-    # Reusable nixos modules you might want to export
-    # These are usually stuff you would upstream into nixpkgs
     nixosModules = import ./modules/nixos;
-    # Reusable home-manager modules you might want to export
-    # These are usually stuff you would upstream into home-manager
     homeManagerModules = import ./modules/home-manager;
 
     nixosConfigurations = {
@@ -70,6 +60,13 @@
           ./hosts/g500s/configuration.nix
         ];
       };
+      # x230t = nixpkgs.lib.nixosSystem {
+      #   system = "x86_64-linux";
+      #   specialArgs = {inherit inputs outputs;};
+      #   modules = [
+      #     ./hosts/x230t/configuration.nix
+      #   ];
+      # };
     };
   };
 }

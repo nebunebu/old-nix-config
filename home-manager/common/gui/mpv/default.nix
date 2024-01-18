@@ -6,12 +6,12 @@
   ];
 
   home.file = {
-    ".config/mpv/scripts/modernx.lua".source = ./scripts/osc/modernx.lua;
-    ".config/mpv/fonts/modernx-osc-icon.ttf".source = ./scripts/osc/modernx-osc-icon.ttf;
-    ".config/mpv/scripts/crop.lua".source = ./scripts/crop.lua;
-    ".config/mpv/scripts/auto-save-state.lua".source = ./scripts/auto-save-state.lua;
-    ".config/mpv/scripts/locatefile.lua".source = ./scripts/locatefile.lua;
-    ".config/mpv/script-modules/extended-menu.lua".source = ./scripts/extended-menu.lua;
+    # ".config/mpv/scripts/modernx.lua".source = ./scripts/osc/modernx.lua;
+    # ".config/mpv/fonts/modernx-osc-icon.ttf".source = ./scripts/osc/modernx-osc-icon.ttf;
+    # ".config/mpv/scripts/crop.lua".source = ./scripts/crop.lua;
+    # ".config/mpv/scripts/auto-save-state.lua".source = ./scripts/auto-save-state.lua;
+    # ".config/mpv/scripts/locatefile.lua".source = ./scripts/locatefile.lua;
+    # ".config/mpv/script-modules/extended-menu.lua".source = ./scripts/extended-menu.lua;
     # ".config/mpv/scripts/M-x.lua".source = ./M-x.lua;
     # not sure if working or keeping
     # ".config/mpv/scripts/command_palette.lua".source = ./command_palette.lua;
@@ -22,6 +22,13 @@
 
   programs.mpv = {
     enable = true;
+    scripts = with pkgs.mpvScripts; [
+      # (pkgs.callPackage ../../../../pkgs/mpvScripts/auto-save-state.nix { })
+      thumbfast
+      mpv-webm
+      pkgs.unstable.mpvScripts.sponsorblock-minimal
+    ];
+
     bindings = {
       "j" = "seek -5";
       "k" = "cycle pause";
@@ -63,10 +70,5 @@
         twopass = "no";
       };
     };
-    scripts = with pkgs.mpvScripts; [
-      thumbfast
-      mpv-webm
-      sponsorblock
-    ];
   };
 }
