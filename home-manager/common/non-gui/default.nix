@@ -7,6 +7,7 @@
   imports = [
     ./nixvim/default.nix
     ./tmux/default.nix
+    ./taskwarrior/default.nix
     ./kitty/default.nix
     ./zsh/default.nix
     ./git/default.nix
