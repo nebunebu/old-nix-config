@@ -33,7 +33,10 @@
     };
     taskserver = {
       enable = true;
-      organisations.my-taskserver.users = [ "nebu"];
+      allowedClientIDs = [ "all" ];
+      ciphers = "NORMAL";
+      openFirewall = true;
+      organisations.my-taskserver.users = [ "nebu" ];
     };
   };
 
