@@ -6,10 +6,10 @@
 
   imports = [
     inputs.nix-colors.homeManagerModules.default
-    ../common/git/default.nix
-    ../common/nixvim/default.nix
-    ../common/fzf/default.nix
-    ../common/zsh/default.nix
+    ../common/non-gui/git/default.nix
+    ../common/non-gui/nixvim/default.nix
+    ../common/non-gui/fzf/default.nix
+    ../common/non-gui/zsh/default.nix
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.rose-pine;

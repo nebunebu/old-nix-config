@@ -9,7 +9,7 @@
 
   imports = [
     inputs.home-manager.nixosModules.home-manager
-    ./sops/default.nix
+    # ./sops/default.nix
   ];
 
   boot.loader = {
@@ -142,7 +142,7 @@
   xdg.portal = {
     enable = true;
     wlr.enable = true;
-    extraPortals = [
+    configPackages = [
       pkgs.xdg-desktop-portal-gtk
     ];
   };
