@@ -1,4 +1,4 @@
-{ pkgs, lib, ...}:
+{ pkgs, ...}:
 
 {
   programs.tmux = {
@@ -23,11 +23,12 @@
       ;
 
     plugins = with pkgs.tmuxPlugins; [
+      # (callPlugin ../../../../pkgs/tmuxPlugins/rose-pine.nix { })
       {
         plugin = mkTmuxPlugin {
           pluginName = "rose-pine";
           version = "unstable-2024-01-07";
-          src = pkgs.fetchFromGitHub{
+          src = pkgs.fetchFromGitHub {
             owner = "rose-pine";
             repo = "tmux";
             rev = "dd6d01338ac4afeb96542dcf24e4a7fe179b69e6";

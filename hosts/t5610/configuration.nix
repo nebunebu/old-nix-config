@@ -8,8 +8,8 @@
   networking.hostName = "t5610";
   home-manager.users.nebu = import ../../home-manager/t5610/home.nix;
   programs.hyprland.enable = true;
-
   services.spice-vdagentd.enable = true;
+
   security = {
     rtkit.enable = true;
     polkit = {

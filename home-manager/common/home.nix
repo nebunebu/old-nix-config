@@ -15,7 +15,13 @@
     username = "nebu";
     homeDirectory = "/home/nebu";
     packages = with pkgs; [
+      (callPackage ../../pkgs/trekscii.nix {})
+      
+
+      # TODO: mkdir for nix specific stuff
       nix-prefetch-github
+      nix-search-cli
+
       (nerdfonts.override { fonts = [
         "DroidSansMono"
         "JetBrainsMono"
