@@ -31,13 +31,6 @@
       enable = true;
       openFirewall = true;
     };
-    taskserver = {
-      enable = true;
-      allowedClientIDs = [ "all" ];
-      ciphers = "NORMAL";
-      openFirewall = true;
-      organisations.my-taskserver.users = [ "nebu" ];
-    };
   };
 
   systemd = {
