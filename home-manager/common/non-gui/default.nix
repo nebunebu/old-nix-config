@@ -12,6 +12,7 @@
     ./zsh/default.nix
     ./git/default.nix
     ./fzf/default.nix
+    ./tuir/default.nix
   ];
 
   home = {

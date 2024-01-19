@@ -11,13 +11,17 @@
   sops = {
     defaultSopsFile = ../../../secrets/secrets.yaml;
     age.keyFile = "/home/nebu/.config/sops/age/keys.txt";
-    secrets.example_key = {};
+    secrets.imgur_client_id = {};
+    secrets.oauth_client_id = {};
+    secrets.oauth_client_secret = {};
 
-    templates."tuir.cfg" = {
+    templates."tuir.secrets" = {
       owner = "nebu";
-      path = "/home/nebu/tuir.cfg";
+      path = "/home/nebu/.config/tuir/tuir.secrets";
       content = ''
-       password = "${config.sops.placeholder.example_key}"
+        imgur_client_id = ${config.sops.placeholder.imgur_client_id}
+        oauth_client_id = ${config.sops.placeholder.oauth_client_id}
+        oauth_client_secret = ${config.sops.placeholder.oauth_client_secret}
       '';
     };
   };

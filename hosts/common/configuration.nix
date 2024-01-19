@@ -9,7 +9,7 @@
 
   imports = [
     inputs.home-manager.nixosModules.home-manager
-    # ./sops/default.nix
+    ./sops/default.nix
   ];
 
   boot.loader = {
