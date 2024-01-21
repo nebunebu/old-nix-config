@@ -10,12 +10,13 @@
     ./non-gui/default.nix
   ];
 
-  # nixpkgs = {
-  #   overlays = [
-  #     outputs.overlays.unstable-packages
-  #     # outputs.overlays.additions
-  #   ];
-  # };
+  nixpkgs = {
+    overlays = [
+      outputs.overlays.unstable-packages
+      outputs.overlays.additions
+      outputs.overlays.modifications
+    ];
+  };
 
   colorScheme = inputs.nix-colors.colorSchemes.rose-pine;
 
