@@ -20,6 +20,7 @@
     packages = with pkgs; [
       swww
       swaynotificationcenter
+      # libnotify
       (nerdfonts.override { fonts = [
         "DroidSansMono"
         "JetBrainsMono"

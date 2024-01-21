@@ -1,5 +1,4 @@
 {
-  inputs,
   pkgs,
   ...
 }: {
@@ -13,6 +12,7 @@
     ./git/default.nix
     ./fzf/default.nix
     ./tuir/default.nix
+    ./newsboat/default.nix
   ];
 
   home = {
@@ -22,6 +22,7 @@
       ytfzf
       ripgrep-all
       distrobox
+      pup
     ];
   };
 
