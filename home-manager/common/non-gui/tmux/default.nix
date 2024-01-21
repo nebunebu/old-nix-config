@@ -23,28 +23,17 @@
       ;
 
     plugins = with pkgs.tmuxPlugins; [
-      # (callPlugin ../../../../pkgs/tmuxPlugins/rose-pine.nix { })
-      {
-        plugin = mkTmuxPlugin {
-          pluginName = "rose-pine";
-          version = "unstable-2024-01-07";
-          src = pkgs.fetchFromGitHub {
-            owner = "rose-pine";
-            repo = "tmux";
-            rev = "dd6d01338ac4afeb96542dcf24e4a7fe179b69e6";
-            sha256 = "sha256-Tccb4VjdotOSw7flJV4N0H4557NxRhXiCecZBPU9ICQ=";
-          };
-        rtpFilePath = "rose-pine.tmux";
-        };
-        extraConfig = ''
-          set -g @rose_pine_variant 'main'
-          set -g @rose_pine_date_time '%_I:%M %a %D'
-          set -g @rose_pine_show_pane_directory 'on'
-          set -g @rose_pine_status_left_prepend_section '#{tmux_mode_indicator}'
-          set -g @rose_pine_show_current_program 'on'
-          set -g @rose_pine_show_pane_directory 'on'
-        '';
-      }
+      # {
+      #   plugin = pkgs.rose-pine;
+      #   extraConfig = ''
+      #     set -g @rose_pine_variant 'main'
+      #     set -g @rose_pine_date_time '%_I:%M %a %D'
+      #     set -g @rose_pine_show_pane_directory 'on'
+      #     set -g @rose_pine_status_left_prepend_section '#{tmux_mode_indicator}'
+      #     set -g @rose_pine_show_current_program 'on'
+      #     set -g @rose_pine_show_pane_directory 'on'
+      #   '';
+      # }
       {
         plugin = mode-indicator;
         extraConfig = ''

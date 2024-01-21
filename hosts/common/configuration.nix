@@ -82,6 +82,11 @@
   };
 
   nixpkgs = {
+    overlays = [
+      outputs.overlays.additions
+      outputs.overlays.modifications
+      outputs.overlays.unstable-packages
+    ];
     config = {
       allowUnfree = true;
     };
@@ -115,7 +120,9 @@
   };
 
   environment = {
-    systemPackages = [ pkgs.git pkgs.sops pkgs.wl-clipboard ];
+    systemPackages = [
+      pkgs.git pkgs.sops pkgs.wl-clipboard
+    ];
     sessionVariables = {
       EDITOR = "nvim";
     };

@@ -26,7 +26,7 @@
       # (pkgs.callPackage ../../../../pkgs/mpvScripts/auto-save-state.nix { })
       thumbfast
       mpv-webm
-      pkgs.unstable.mpvScripts.sponsorblock-minimal
+      # pkgs.unstable.mpvScripts.sponsorblock-minimal
     ];
 
     bindings = {

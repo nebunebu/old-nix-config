@@ -1,4 +1,3 @@
 pkgs: {
-  # example = pkgs.callPackage ./example { };
-  rose-pine = pkgs.callPackage ./rose-pine { };
+  tmuxPlugins.rose-pine = pkgs.callPackage ./tmuxPlugins/rose-pine.nix { };
 }

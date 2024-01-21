@@ -39,7 +39,8 @@
       {
         tags = [ "yt" "nix" ];
         title = "RubberDuck";
-        url = "https://www.scriptbarrel.com/xml.cgi?channel_id=UCs_xdqtQHTkl7LxazKIjKCg";
+        url = "https://www.youtube.com/feeds/videos.xml?channel_id=UCs_xdqtQHTkl7LxazKIjKCg";
+
       }
     ];
   };
