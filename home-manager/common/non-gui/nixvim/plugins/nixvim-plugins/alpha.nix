@@ -40,33 +40,13 @@
             shortcut = "w";
           }
           {
-            command = "<CMD>e $HOME/.config/home-manager/common/default.nix<CR>";
-            desc = "󱎰  Home-manager";
+            command = "<CMD>e $HOME/.nix-config/flake.nix<CR>";
+            desc = " nix-config";
             shortcut = "h";
           }
           {
-            command = "<CMD>e $HOME/.config/home-manager/common/programs/cli/default.nix<CR>";
-            desc = "  CLI Programs";
-            shortcut = "c";
-          }
-          {
-            command = "<CMD>e $HOME/.config/home-manager/common/programs/tui/default.nix<CR>";
-            desc = "  TUI Programs";
-            shortcut = "t";
-          }
-          {
-            command = "<CMD>e $HOME/.config/home-manager/common/programs/gui/default.nix<CR>";
-            desc = "  GUI Programs";
-            shortcut = "g";
-          }
-          {
-            command = "<CMD>e $HOME/.config/home-manager/common/programs/tui/nixvim/default.nix<CR>";
-            desc = "  Nixvim";
-            shortcut = "n";
-          }
-          {
             command = ":qa<CR>";
-            desc = "󱎰  Quit Neovim";
+            desc = "󰩈 Quit Neovim";
             shortcut = "q";
           }
         ];
