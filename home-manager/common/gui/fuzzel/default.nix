@@ -23,13 +23,13 @@
           radius = 10;
         };
       colors = {
-        # background = "${config.colorScheme.colors.base00}ff";
-        # text = "${config.colorScheme.colors.base05}ff";
-        # match = "${config.colorScheme.colors.base0B}ff";
-        # selection = "${config.colorScheme.colors.base0B}ff";
-        # selection-text = "${config.colorScheme.colors.base00}ff";
-        # selection-match = "${config.colorScheme.colors.base0E}ff";
-        # border = "${config.colorScheme.colors.base0D}ff";
+        background = "${config.colorScheme.colors.base00}ff";
+        text = "${config.colorScheme.colors.base05}ff";
+        match = "${config.colorScheme.colors.base0B}ff";
+        selection = "${config.colorScheme.colors.base0B}ff";
+        selection-text = "${config.colorScheme.colors.base00}ff";
+        selection-match = "${config.colorScheme.colors.base0E}ff";
+        border = "${config.colorScheme.colors.base0D}ff";
       };
     };
   };
