@@ -4,6 +4,7 @@
 }: {
 
   imports = [
+     ./theme/default.nix
      ./fuzzel/default.nix
      ./hypr/default.nix
      ./mpv/default.nix
