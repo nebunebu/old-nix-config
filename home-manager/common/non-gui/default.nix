@@ -23,6 +23,7 @@
       ripgrep-all
       distrobox
       pup
+      lazygit
     ];
   };
 
