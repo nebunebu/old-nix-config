@@ -27,8 +27,8 @@
           "Clear Search Highlights"
         },
         t = {
-          "<cmd>Neotree<CR>",
-          "Open Neotree"
+          "<cmd>Triptych<CR>",
+          "Open Triptych"
         },
         n = {
           "<cmd>NullLsInfo<CR>",
