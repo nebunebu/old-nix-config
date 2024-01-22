@@ -21,8 +21,8 @@
       Type = "simple";
       ExecStart = "${pkgs.writeShellScript "tuir-cat" ''
       #!/run/current-system/sw/bin/bash
-      ${pkgs.coreutils}/bin/cat /home/nebu/.config/tuir/tuir.cfg.init /home/nebu/.config/tuir/tuir.secrets > /home/nebu/.config/tuir/tuir.cfg
-      ${pkgs.coreutils}/bin/rm  /home/nebu/.config/tuir/tuir.cfg.init /home/nebu/.config/tuir/tuir.secrets 
+      ${pkgs.coreutils}/bin/cat ${config.xdg.configHome}/tuir/tuir.cfg.init ${config.xdg.configHome}/tuir/tuir.secrets > ${config.xdg.configHome}/tuir/tuir.cfg
+      ${pkgs.coreutils}/bin/rm ${config.xdg.configHome}/tuir/tuir.cfg.init ${config.xdg.configHome}/tuir/tuir.secrets
     ''}";
     };
   };
