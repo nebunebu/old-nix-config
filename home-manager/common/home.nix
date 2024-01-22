@@ -8,6 +8,7 @@
   imports = [
     inputs.nix-colors.homeManagerModules.default
     ./non-gui/default.nix
+    ./xdg.nix
   ];
 
   nixpkgs = {
