@@ -17,22 +17,17 @@
       ",XF86KbdBrightnessDown, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
       ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_SINK@ toggle"
 
-      "$mainMod, R, exec, hm-switch"
       "$mainMod, ALT_R, exec, screen-capture"
-      # "$mainMod, C, exec, pypr toggle jfmp"
 
       "$mainMod, X, killactive"
       "$mainMod, M, fullscreen, 1"
       "$mainMod, F, togglefloating"
       "$mainMod, V, exec, cliphist-menu"
-      "$mainMod, C, exec, cheatsheet-menu"
 
-      # "$mainMod, Return, exec, foot"
       "$mainMod, Return, exec, kitty zsh -c \"tmux new-session -A -s \"main\"\""
-      "$mainMod, Y, exec, kitty --class=\"ytfzf\" zsh -c \"ytfzf\""
-      "$mainMod, T, exec, kitty --class=\"ytfzf\" zsh -c \"taskwarrior-tui\""
       "$mainMod, I, exec, firefox"
       "$mainMod, P, exec, fuzzel"
+      "$mainMod, D, exec, distrobox enter arch -- discord-screenaudio"
       "$mainMod, U, exec, waydroid app launch com.android.deskclock"
 
       "$mainMod, H, movefocus, l"
