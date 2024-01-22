@@ -5,18 +5,6 @@
     local wk = require("which-key")
 
     wk.register({
-        -- h = {
-        --   "<cmd>vertical resize -2<CR>",
-        -- },
-        -- j = {
-        --   "<cmd>horizontal resize -2<CR>",
-        -- },
-        -- k = {
-        --   "<cmd>horizontal resize +2<CR>",
-        -- },
-        -- l = {
-        --   "<cmd>vertical resize +2<CR>",
-        -- },
       ["<leader>"] = {
         ["/"] = {
           "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>",
@@ -65,14 +53,6 @@
           { "<cmd>Telescope help_tags<CR>",
             "Find help tags"
           },
-          -- n =
-          -- { "<cmd>Nerdy<CR>",
-          --   "Find nerd font icon"
-          -- },
-          -- u =
-          -- { "<cmd>Telescope undo<CR>",
-          --   "Find undo"
-          -- }
         },
       },
     }, {mode = "n"})

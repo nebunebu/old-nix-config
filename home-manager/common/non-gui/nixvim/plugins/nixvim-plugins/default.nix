@@ -1,7 +1,6 @@
 {
   imports = [
     ./telescope.nix
-    # ./neo-tree.nix
     ./lualine.nix
     ./alpha.nix
     ./treesitter.nix
@@ -32,13 +31,3 @@
     nvim-colorizer.enable = true;
   };
 }
-
-# dap
-# neogen
-# ts-autotag
-# nvim-bqf
-# flash
-# mark-radar
-# cmp-mkdnflow
-# oil
-# sniprun

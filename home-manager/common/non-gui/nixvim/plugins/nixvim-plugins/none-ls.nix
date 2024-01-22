@@ -1,8 +1,6 @@
 {
   programs.nixvim.plugins.none-ls = {
     enable = false;
-    # diagnosticConfig = ;
-    # diagnosticFormat = ;
     sources = {
       code_actions = { 
         eslint.enable = true;

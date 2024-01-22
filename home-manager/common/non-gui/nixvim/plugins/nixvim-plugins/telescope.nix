@@ -10,13 +10,6 @@
         overrideFileSorter = true;
         overrideGenericSorter = true;
       };
-      # file_browser = {
-      #   enable = true;
-      # };
-      # media_files.enable = true;
     };
-    # extraOptions = {
-    #
-    # };
   };
 }

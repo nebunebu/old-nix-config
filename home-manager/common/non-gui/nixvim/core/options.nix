@@ -1,8 +1,6 @@
 {
   programs.nixvim.options = {
-    # updatetime = 100;
     autochdir = true;
-    # autoread = true;
     clipboard = "unnamedplus";
     number = true;
     relativenumber = true;
