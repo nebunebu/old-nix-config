@@ -21,6 +21,7 @@
     packages = with pkgs; [
       ytfzf
       ripgrep-all
+      lazygit
       distrobox
       pup
       lazygit
