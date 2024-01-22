@@ -21,7 +21,7 @@
   programs.mpv = {
     enable = true;
     scripts = with pkgs.mpvScripts; [
-      pkgs.auto-save-state
+      # pkgs.auto-save-state
       thumbfast
       mpv-webm
     ];
