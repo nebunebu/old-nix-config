@@ -2,11 +2,12 @@
 
 {
   imports = [
-    ./hyprland.nix
     ./hypr-settings/default.nix
+    # ./plugins/default.nix
   ];
 
   wayland.windowManager.hyprland = {
+    package = inputs.hyprland.packages."${pkgs.system}".hyprland;
     enable = true;
     xwayland.enable = true;
     systemd = {

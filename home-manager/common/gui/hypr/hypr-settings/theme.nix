@@ -1,6 +1,7 @@
 { config, ...}:
 
 {
+  # NOTE: cleaner to use `opt = with config.colorScheme.colors; {...};`
   wayland.windowManager.hyprland.settings = {
     "$color-gray0"  = "0xff${config.colorScheme.colors.base05}";
     "$color-gray1"  = "0xff${config.colorScheme.colors.base03}";
