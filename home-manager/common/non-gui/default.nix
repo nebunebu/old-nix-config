@@ -13,6 +13,7 @@
     ./fzf/default.nix
     ./tuir/default.nix
     ./newsboat/default.nix
+    ./nix/default.nix
   ];
 
   home = {

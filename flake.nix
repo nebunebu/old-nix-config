@@ -25,7 +25,6 @@
 
     # TODO: add impermanence
     # impermanence.url = "github:nix-community/impermanence";
-
   };
 
   outputs = {
