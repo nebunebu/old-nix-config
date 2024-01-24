@@ -20,6 +20,7 @@
     homeDirectory = "/home/nebu";
     packages = with pkgs; [
       swww
+      spotube
       swaynotificationcenter
       # libnotify
       (nerdfonts.override { fonts = [
