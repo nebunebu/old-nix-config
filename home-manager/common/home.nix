@@ -32,9 +32,12 @@
       nix-prefetch-github
       nix-search-cli
 
+      unicode-emoji
       (nerdfonts.override { fonts = [
+        "ProFont"
         "DroidSansMono"
-        "JetBrainsMono"
+        # "CaskaydiaMono"
+        # "Martin"
         "HeavyData"
       ]; })
     ];

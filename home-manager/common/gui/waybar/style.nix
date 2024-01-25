@@ -1,13 +1,38 @@
 { config, ... }:
 
+
 {
   programs.waybar = {
-    style = /* css */ ''
+    style = with config.colorScheme.colors;
+    /* css */ 
+''
 * {
   border: none;
-  border-radius: 0;
-  font-family:  "HeavyData Nerd Font Propo", "Font Awesome 6 Free", "Source Code Pro";
+  border-radius: 5px;
+  font-family: "HeavyData Nerd Font Propo", "Font Awesome 6 Free",  "Source Code Pro";
   font-size: 15px;
+}
+
+tooltip * {
+  font-family: "ProFont Nerd Font", "Font Awesome 6 Free", "Source Code Pro";
+}
+
+tooltip {
+  color: #${base04};
+  background-color: #${base00};
+  border-radius: 5px;
+  border: 2px solid #${base09};
+}
+
+menu * {
+  font-family: "ProFont Nerd Font", "Font Awesome 6 Free", "Source Code Pro";
+}
+
+menu {
+  color: #${base04};
+  background-color: #${base00};
+  border-radius: 5px;
+  border: 2px solid #${base09};
 }
 
 window#waybar {
@@ -17,8 +42,9 @@ window#waybar {
 
 button {
     box-shadow: inset 0 -3px transparent;
+    /* border: 2px solid #${base09}; */
     border: none;
-    border-radius: 6px;
+    border-radius: 5px;
 }
 
 button:hover {
@@ -53,6 +79,7 @@ button:hover {
 }
 
 #custom-notification,
+#custom-waybarmpris,
 #custom-mic,
 #pulseaudio,
 #battery,
@@ -63,6 +90,16 @@ button:hover {
     background: #${config.colorScheme.colors.base0A};
     border-radius: 5px;
     margin: 0 1px;
+}
+
+
+#custom-waybarmpris {
+  font-family: "DroidSansMono Nerd Font", "Font Awesome 6 Free", "Source Code Pro";
+  background: #${config.colorScheme.colors.base0C};
+}
+
+#custom-waybarmpris.paused {
+  background: #${config.colorScheme.colors.base04};
 }
 
 #tray {
