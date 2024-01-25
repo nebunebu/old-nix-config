@@ -17,6 +17,11 @@
         url = "https://dotfyle.com/this-week-in-neovim/rss.xml ";
       }
       {
+        tags = [ "articles" ];
+        title = "lifehaker";
+        url = "https://lifehacker.com/feed/rss";
+      }
+      {
         tags = [ "yt" ];
         title = "typecraft";
         url = "https://www.scriptbarrel.com/xml.cgi?channel_id=UCo71RUe6DX4w-Vd47rFLXPg";
