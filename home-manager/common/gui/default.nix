@@ -22,6 +22,7 @@
       swww
       spotube
       swaynotificationcenter
+      waybar-mpris
       # libnotify
       (nerdfonts.override { fonts = [
         "DroidSansMono"

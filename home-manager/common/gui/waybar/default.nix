@@ -16,7 +16,25 @@
           "DP-1"
         ];
         modules-left = [ "hyprland/workspaces" ];
-        modules-right = [ "custom/notification" ];
+        modules-right = [
+          "custom/waybarmpris"
+          "custom/notification"
+        ];
+
+        "custom/waybarmpris" = {
+          "return-type" = "json";
+          "exec" = "waybar-mpris --position --autofocus";
+          "on-click" = "waybar-mpris --send toggle";
+          # This option will switch between players on right click.
+            "on-click-right" = "waybar-mpris --send player-next";
+          # // The options below will switch the selected player on scroll
+              # "on-scroll-up" = "waybar-mpris --send player-next";
+              # "on-scroll-down" = "waybar-mpris --send player-prev";
+          # // The options below will go to next/previous track on scroll
+              "on-scroll-up" = "waybar-mpris --send next";
+              "on-scroll-down" = "waybar-mpris --send prev";
+          "escape" = true;
+        };
 
         "custom/notification" = {
           "tooltip" = false;
