@@ -6,18 +6,16 @@
 }: {
   imports = [
     inputs.nix-colors.homeManagerModules.default
+    ./nix
     ./non-gui
-    ./xdg.nix
+    ./gui
     ./services
+    ./xdg.nix
   ];
-
-  # programs.nix-index-database.comma.enable = true;
-  # programs.nix-index.enable = true;
 
   programs.nix-index = {
     enable = true;
     enableZshIntegration = true;
-    # package = ;
   };
 
   nixpkgs = {
@@ -30,27 +28,34 @@
 
   colorScheme = inputs.nix-colors.colorSchemes.rose-pine;
 
+  programs.go = {
+    enable = true;
+    goBin = ".config/go/bin.go";
+    goPath = ".config/go/go";
+  };
+
   home = {
     username = "nebu";
     homeDirectory = "/home/nebu";
-    packages = with pkgs; [
-      (callPackage ../../pkgs/trekscii.nix {})
-
-      # TODO: mkdir for nix specific stuff
-      alejandra
-      nix-prefetch-github
-      nix-search-cli
-      ffmpeg
-
-      unicode-emoji
-      (nerdfonts.override {
-        fonts = [
-          "ProFont"
-          "DroidSansMono"
-          "HeavyData"
-        ];
-      })
-    ];
+    packages = builtins.attrValues {
+      nerdfonts =
+        pkgs.callPackage
+        (pkgs.nerdfonts.override {
+          fonts = [
+            "DroidSansMono"
+            "JetBrainsMono"
+            "HeavyData"
+          ];
+        });
+      inherit
+        (pkgs)
+        ripgrep-all
+        distrobox
+        swaynotificationcenter
+        ytfzf
+        libnotify
+        ;
+    };
   };
 
   programs.home-manager.enable = true;

@@ -1,8 +1,4 @@
-{
-  inputs,
-  pkgs,
-  ...
-}: {
+{inputs, ...}: {
   imports = [
     inputs.nix-colors.homeManagerModules.default
     ../common/non-gui/git/default.nix
@@ -23,9 +19,6 @@
   home = {
     username = "nebu";
     homeDirectory = "/home/nebu";
-    packages = with pkgs; [
-      ripgrep-all
-    ];
   };
   programs.home-manager.enable = true;
   programs.git.enable = true;

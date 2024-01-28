@@ -8,20 +8,23 @@
     # file = {
     #   ".config/hypr/pyprland.toml".source = ./pyprland.toml;
     # };
-    packages = with pkgs; [
-      # pyprland
-      swww
-    ];
+    packages = builtins.attrValues {
+      inherit
+        (pkgs)
+        # pyprland
+        
+        ;
+    };
   };
 
   wayland.windowManager.hyprland = {
-    extraConfig = ''
-      env = LIBVA_DRIVER_NAME, nvidia
-      env = XDG_SESSION_TYPE, wayland
-      env = GBM_BACKEND, nvidia-drm
-      env = __GLX_VENDOR_LIBRARY_NAME, nvidia
-      env = WLR_NO_HARDWARE_CURSORS, 1
-    '';
+    # extraConfig = ''
+    #   env = LIBVA_DRIVER_NAME, nvidia
+    #   env = XDG_SESSION_TYPE, wayland
+    #   env = GBM_BACKEND, nvidia-drm
+    #   env = __GLX_VENDOR_LIBRARY_NAME, nvidia
+    #   env = WLR_NO_HARDWARE_CURSORS, 1
+    # '';
     settings = {
       input = {
         "kb_layout" = "us";

@@ -1,9 +1,11 @@
-{config, ...}: {
+{config, ...}: let
+  c = config.colorScheme.colors;
+in {
   programs.waybar = {
-    style = with config.colorScheme.colors;
-    /*
-    css
-    */
+    style =
+      /*
+      css
+      */
       ''
         * {
           border: none;
@@ -17,10 +19,10 @@
         }
 
         tooltip {
-          color: #${base04};
-          background-color: #${base00};
+          color: #${c.base04};
+          background-color: #${c.base00};
           border-radius: 5px;
-          border: 2px solid #${base09};
+          border: 2px solid #${c.base09};
         }
 
         menu * {
@@ -28,53 +30,51 @@
         }
 
         menu {
-          color: #${base04};
-          background-color: #${base00};
+          color: #${c.base04};
+          background-color: #${c.base00};
           border-radius: 5px;
-          border: 2px solid #${base09};
+          border: 2px solid #${c.base09};
         }
 
         window#waybar {
            background-color: rgba(0, 0, 0, 0.0);
-           color: #${config.colorScheme.colors.base00};
+           color: #${c.base00};
         }
 
         button {
             box-shadow: inset 0 -3px transparent;
-            /* border: 2px solid #${base09}; */
             border: none;
             border-radius: 5px;
         }
 
         button:hover {
-            background: #${config.colorScheme.colors.base0C};
-            box-shadow: inset 0 -3px #${config.colorScheme.colors.base0C};
+            background: #${c.base0C};
+            box-shadow: inset 0 -3px #${c.base0C};
         }
 
         #workspaces button {
             padding: 0px 5px;
-            background-color: #${config.colorScheme.colors.base0B};
-            color: #${config.colorScheme.colors.base00};
+            background-color: #${c.base0B};
+            color: #${c.base00};
             margin: 0 1px;
         }
 
         #workspaces button:hover {
         		box-shadow: inherit;
         		text-shadow: inherit;
-            background-color: #${config.colorScheme.colors.base0C};
-            color: #${config.colorScheme.colors.base00};
+            background-color: #${c.base0C};
+            color: #${c.base00};
         }
 
-
         #workspaces button.urgent {
-            background-color: #${config.colorScheme.colors.base09};
+            background-color: #${c.base09};
         }
 
         #workspaces button.focused,
         #workspaces button.active
         {
-            background-color: #${config.colorScheme.colors.base0D};
-            color: #${config.colorScheme.colors.base00};
+            background-color: #${c.base0D};
+            color: #${c.base00};
         }
 
         #custom-notification,
@@ -85,8 +85,8 @@
         #tray,
         #clock {
             padding: 0 10px;
-            color: #${config.colorScheme.colors.base00};
-            background: #${config.colorScheme.colors.base0A};
+            color: #${c.base00};
+            background: #${c.base0A};
             border-radius: 5px;
             margin: 0 1px;
         }
@@ -94,24 +94,24 @@
 
         #custom-waybarmpris {
           font-family: "DroidSansMono Nerd Font", "Font Awesome 6 Free", "Source Code Pro";
-          background: #${config.colorScheme.colors.base0C};
+          background: #${c.base0C};
         }
 
         #custom-waybarmpris.paused {
-          background: #${config.colorScheme.colors.base04};
+          background: #${c.base04};
         }
 
         #tray {
-          background: #${config.colorScheme.colors.base04};
+          background: #${c.base04};
         }
 
 
         #pulseaudio.source-muted {
-            background-color: #${config.colorScheme.colors.base08};
+            background-color: #${c.base08};
         }
 
         #pulseaudio.muted {
-            background-color: #${config.colorScheme.colors.base08};
+            background-color: #${c.base08};
         }
 
         .modules-left > widget:first-child > #workspaces {

@@ -1,12 +1,12 @@
 {pkgs, ...}: {
   programs.nixvim = {
-    extraPlugins = with pkgs.vimPlugins; [
+    extraPlugins = [
+      {plugin = pkgs.triptych-nvim;}
+      {plugin = pkgs.vimPlugins.firenvim;}
       {
-        plugin = rose-pine;
+        plugin = pkgs.vimPlugins.rose-pine;
         config = "colorscheme rose-pine";
       }
-      firenvim
-      pkgs.triptych-nvim
     ];
     extraConfigLua = ''
       require("triptych").setup({})

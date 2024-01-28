@@ -2,7 +2,9 @@
   inputs,
   config,
   ...
-}: {
+}: let
+  p = config.sops.placeholder;
+in {
   imports = [
     inputs.sops-nix.nixosModules.sops
   ];
@@ -17,10 +19,10 @@
     templates."tuir.secrets" = {
       owner = "nebu";
       path = "/home/nebu/demo/tuir.secrets";
-      content = with config.sops.placeholder; ''
-        imgur_client_id = ${imgur_client_id}
-        oauth_client_id = ${oauth_client_id}
-        oauth_client_secret = ${oauth_client_secret}
+      content = ''
+        imgur_client_id = ${p.imgur_client_id}
+        oauth_client_id = ${p.oauth_client_id}
+        oauth_client_secret = ${p.oauth_client_secret}
       '';
     };
   };

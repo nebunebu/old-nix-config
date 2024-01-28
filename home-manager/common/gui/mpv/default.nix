@@ -1,16 +1,22 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [
-    jellyfin-mpv-shim
-  ];
+  home.packages = builtins.attrValues {
+    inherit
+      (pkgs)
+      jellyfin-mpv-shim
+      ;
+  };
 
   programs.mpv = {
     enable = true;
-    scripts = with pkgs.mpvScripts; [
-      sponsorblock
-      thumbfast
-      mpv-webm
-      uosc
-    ];
+    scripts = builtins.attrValues {
+      inherit
+        (pkgs.mpvScripts)
+        sponsorblock
+        thumbfast
+        mpv-webm
+        uosc
+        ;
+    };
 
     bindings = {
       "j" = "seek -5";

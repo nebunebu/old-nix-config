@@ -14,19 +14,14 @@
   home = {
     username = "nebu";
     homeDirectory = "/home/nebu";
-    packages = with pkgs; [
-      swww
-      spotube
-      swaynotificationcenter
-      waybar-mpris
-      # libnotify
-      (nerdfonts.override {
-        fonts = [
-          "DroidSansMono"
-          "JetBrainsMono"
-          "HeavyData"
-        ];
-      })
-    ];
+    packages = builtins.attrValues {
+      inherit
+        (pkgs)
+        swww
+        spotube
+        swaynotificationcenter
+        waybar-mpris
+        ;
+    };
   };
 }

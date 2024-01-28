@@ -9,26 +9,27 @@
     ./fzf/default.nix
     ./tuir/default.nix
     ./newsboat/default.nix
-    ./nix/default.nix
   ];
 
   home = {
     username = "nebu";
     homeDirectory = "/home/nebu";
-    packages = with pkgs; [
-      newsraft
-      ripgrep
-      fd
-      ytfzf
-      yt-dlp
-      jq
-      ripgrep-all
-      lazygit
-      distrobox
-      pup
-      lazygit
-      nitch
-    ];
+    packages = builtins.attrValues {
+      inherit
+        (pkgs)
+        newsraft
+        ripgrep
+        fd
+        ytfzf
+        yt-dlp
+        jq
+        ripgrep-all
+        distrobox
+        pup
+        lazygit
+        nitch
+        ;
+    };
   };
 
   programs.go = {

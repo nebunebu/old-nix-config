@@ -18,12 +18,15 @@
   };
 
   nixpkgs.config.allowUnfree = true;
-  environment.systemPackages = with pkgs; [
-    kitty
-    jellyfin
-    jellyfin-web
-    jellyfin-ffmpeg
-  ];
+  environment.systemPackages = builtins.attrValues {
+    inherit
+      (pkgs)
+      kitty
+      jellyfin
+      jellyfin-web
+      jellyfin-ffmpeg
+      ;
+  };
 
   services = {
     upower.ignoreLid = true;

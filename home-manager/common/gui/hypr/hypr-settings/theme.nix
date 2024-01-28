@@ -1,14 +1,16 @@
-{config, ...}: {
-  wayland.windowManager.hyprland.settings = with config.colorScheme.colors; {
-    "$color-gray0" = "0xff${base05}";
-    "$color-gray1" = "0xff${base03}";
-    "$color-gray2" = "0xff${base07}";
-    "$color-red" = "0xff${base08}";
-    "$color-yellow" = "0xff${base09}";
-    "$color-tan" = "0xff${base0A}";
-    "$color-dteal" = "0xff${base0B}";
-    "$color-lteal" = "0xff${base0C}";
-    "$color-purple" = "0xff${base0D}";
+{config, ...}: let
+  c = config.colorScheme.colors;
+in {
+  wayland.windowManager.hyprland.settings = {
+    "$color-gray0" = "0xff${c.base05}";
+    "$color-gray1" = "0xff${c.base03}";
+    "$color-gray2" = "0xff${c.base07}";
+    "$color-red" = "0xff${c.base08}";
+    "$color-yellow" = "0xff${c.base09}";
+    "$color-tan" = "0xff${c.base0A}";
+    "$color-dteal" = "0xff${c.base0B}";
+    "$color-lteal" = "0xff${c.base0C}";
+    "$color-purple" = "0xff${c.base0D}";
 
     general = {
       "gaps_in" = "7";

@@ -22,12 +22,15 @@
     NIXOS_OZONE_WL = "1";
   };
 
-  home.packages = with pkgs; [
-    libsForQt5.polkit-kde-agent
-    wl-clipboard
-    wf-recorder
-    grim
-    slurp
-    wev
-  ];
+  home.packages = builtins.attrValues {
+    # pkgs.libsForQt5.polkit-kde-agent
+    inherit
+      (pkgs)
+      wl-clipboard
+      wf-recorder
+      grim
+      slurp
+      wev
+      ;
+  };
 }

@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./scripts/linkhandler.nix
-    ./scripts/redbar-dl.nix
+    # ./scripts/redbar-dl.nix
     ./urls/default.nix
   ];
 

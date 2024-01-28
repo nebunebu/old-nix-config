@@ -1,11 +1,9 @@
 {
   config,
-  lib,
   pkgs,
   ...
-}:
-# Stuff for nvidia proprietary drivers I don't actually use
-{
+}: {
+  # Stuff for nvidia proprietary drivers I don't actually use
   hardware = {
     nvidia = {
       modesetting.enable = true;
@@ -18,10 +16,13 @@
   environment = {
     sessionVariables = {
     };
-    systemPackages = with pkgs; [
-      cudatoolkit
-      nvtop
-    ];
+    systemPackages = builtins.attrValues {
+      inherit
+        (pkgs)
+        cudatoolkit
+        nvtop
+        ;
+    };
   };
 
   boot.initrd.kernelModules = ["nvidia"];
