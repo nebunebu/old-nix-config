@@ -1,6 +1,8 @@
-{ pkgs, config, ... }:
-
 {
+  pkgs,
+  config,
+  ...
+}: {
   home.file = {
     ".config/tuir/tuir.cfg.init".source = ./tuir.cfg;
     ".config/tuir/mailcap".source = ./mailcap;
@@ -16,15 +18,14 @@
   };
 
   systemd.user.services.tuir-init = {
-    Install.WantedBy = [ "default.target" ];
+    Install.WantedBy = ["default.target"];
     Service = {
       Type = "simple";
-      ExecStart = "${pkgs.writeShellScript "tuir-cat" ''
-      #!/run/current-system/sw/bin/bash
-      ${pkgs.coreutils}/bin/cat ${config.xdg.configHome}/tuir/tuir.cfg.init ${config.xdg.configHome}/tuir/tuir.secrets > ${config.xdg.configHome}/tuir/tuir.cfg
-      ${pkgs.coreutils}/bin/rm ${config.xdg.configHome}/tuir/tuir.cfg.init ${config.xdg.configHome}/tuir/tuir.secrets
-    ''}";
+      ExecStart = with config.xdg; "${pkgs.writeShellScript "tuir-cat" ''
+        #!/run/current-system/sw/bin/bash
+        ${pkgs.coreutils}/bin/cat ${configHome}/tuir/tuir.cfg.init ${configHome}/tuir/tuir.secrets > ${configHome}/tuir/tuir.cfg
+        ${pkgs.coreutils}/bin/rm ${configHome}/tuir/tuir.cfg.init ${configHome}/tuir/tuir.secrets
+      ''}";
     };
   };
 }
-

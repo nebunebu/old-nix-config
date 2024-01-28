@@ -1,6 +1,4 @@
-{ config, ...}:
-
-{
+{config, ...}: {
   imports = [
     ./style.nix
   ];
@@ -15,7 +13,7 @@
         output = [
           "DP-1"
         ];
-        modules-left = [ "hyprland/workspaces" ];
+        modules-left = ["hyprland/workspaces"];
         modules-right = [
           "custom/waybarmpris"
           "custom/notification"
@@ -26,13 +24,13 @@
           "exec" = "waybar-mpris --position --autofocus";
           "on-click" = "waybar-mpris --send toggle";
           # This option will switch between players on right click.
-            "on-click-right" = "waybar-mpris --send player-next";
+          "on-click-right" = "waybar-mpris --send player-next";
           # // The options below will switch the selected player on scroll
-              # "on-scroll-up" = "waybar-mpris --send player-next";
-              # "on-scroll-down" = "waybar-mpris --send player-prev";
+          # "on-scroll-up" = "waybar-mpris --send player-next";
+          # "on-scroll-down" = "waybar-mpris --send player-prev";
           # // The options below will go to next/previous track on scroll
-              "on-scroll-up" = "waybar-mpris --send next";
-              "on-scroll-down" = "waybar-mpris --send prev";
+          "on-scroll-up" = "waybar-mpris --send next";
+          "on-scroll-down" = "waybar-mpris --send prev";
           "escape" = true;
         };
 
@@ -64,29 +62,29 @@
         output = [
           "DP-2"
         ];
-        modules-left = [ "hyprland/workspaces" ];
-        modules-right = [ "pulseaudio" "clock" "tray" ];
+        modules-left = ["hyprland/workspaces"];
+        modules-right = ["pulseaudio" "clock" "tray"];
 
         "pulseaudio" = {
-               "format" = "{volume}% {icon} {format_source}";
-               "format-bluetooth" = "{volume}% {icon} {format_source}";
-               "format-bluetooth-muted" = " {icon} {format_source}";
-               "format-muted" = " {format_source}";
-               "format-source" = " {volume}% ";
-               "format-source-muted" = "";
-               "format-icons" = {
-                   "headphone" = "";
-                   "hands-free" = "";
-                   "headset" = "";
-                   "phone" = "";
-                   "portable" = "";
-                   "car" = "";
-                   "default" = ["" "" ""];
-               };
-               "on-click" = "pavucontrol";
-           };
+          "format" = "{volume}% {icon} {format_source}";
+          "format-bluetooth" = "{volume}% {icon} {format_source}";
+          "format-bluetooth-muted" = " {icon} {format_source}";
+          "format-muted" = " {format_source}";
+          "format-source" = " {volume}% ";
+          "format-source-muted" = "";
+          "format-icons" = {
+            "headphone" = "";
+            "hands-free" = "";
+            "headset" = "";
+            "phone" = "";
+            "portable" = "";
+            "car" = "";
+            "default" = ["" "" ""];
+          };
+          "on-click" = "pavucontrol";
+        };
 
-      # Assuming the icon names are "mic-on" and "mic-off"
+        # Assuming the icon names are "mic-on" and "mic-off"
         "custom/mic" = {
           format = "{icon}";
           return-type = "text";
@@ -100,7 +98,7 @@
           interval = 1;
           format-icons = {
             "mic-off" = ""; # Path to mic-off icon
-            "default" = "";  # Path to mic-on icon
+            "default" = ""; # Path to mic-on icon
           };
         };
 

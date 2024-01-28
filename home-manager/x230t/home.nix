@@ -8,27 +8,25 @@
   pkgs,
   ...
 }: {
-
   imports = [
-
     # If you want to use modules your own flake exports (from modules/home-manager):
     # outputs.homeManagerModules.example
 
     inputs.nix-colors.homeManagerModules.default
 
-     ./nixvim/default.nix
-     ./tmux/default.nix
-     ./zsh/default.nix
-     ./git/default.nix
-     ./fuzzel/default.nix
-     ./hypr/default.nix
-     ./mpv/default.nix
-     ./waybar/default.nix
-     ./kitty/default.nix
-     ./sioyek/default.nix
-     ./chromium/default.nix
-     ./firefox/default.nix
-     ./fzf/default.nix
+    ./nixvim/default.nix
+    ./tmux/default.nix
+    ./zsh/default.nix
+    ./git/default.nix
+    ./fuzzel/default.nix
+    ./hypr/default.nix
+    ./mpv/default.nix
+    # ./waybar/default.nix
+    ./kitty/default.nix
+    ./sioyek/default.nix
+    ./chromium/default.nix
+    ./firefox/default.nix
+    ./fzf/default.nix
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.rose-pine;
@@ -69,11 +67,13 @@
       distrobox
       swaynotificationcenter
       ytfzf
-      (nerdfonts.override { fonts = [
-        "DroidSansMono"
-        "JetBrainsMono"
-        "HeavyData"
-      ]; })
+      (nerdfonts.override {
+        fonts = [
+          "DroidSansMono"
+          "JetBrainsMono"
+          "HeavyData"
+        ];
+      })
     ];
   };
 

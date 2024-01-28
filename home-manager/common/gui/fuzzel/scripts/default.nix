@@ -1,10 +1,8 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   imports = [
-   ./cliphist-menu.nix
-   ./power-menu.nix
-   # ./screen-capture.sh
+    ./cliphist-menu.nix
+    ./power-menu.nix
+    # ./screen-capture.sh
   ];
 
   home.packages = [

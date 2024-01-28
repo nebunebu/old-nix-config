@@ -1,8 +1,10 @@
 {
+  programs.nixvim.plugins.lsp-format.enable = true;
   programs.nixvim.plugins.none-ls = {
-    enable = false;
+    enable = true;
+    enableLspFormat = true;
     sources = {
-      code_actions = { 
+      code_actions = {
         eslint.enable = true;
         gitsigns.enable = true;
         shellcheck.enable = true;
@@ -15,17 +17,15 @@
         luacheck = {
           enable = true;
         };
-        # markdownlint.enable = true;
         pylint.enable = true;
         shellcheck.enable = true;
-        statix.enable = true;
       };
       formatting = {
         alejandra.enable = true;
         beautysh.enable = true;
         fourmolu.enable = true;
         jq.enable = true;
-        nixpkgs_fmt.enable = true;
+        prettier.enable = true;
         stylua.enable = true;
       };
     };

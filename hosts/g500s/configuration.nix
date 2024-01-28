@@ -1,11 +1,12 @@
-{ config, pkgs, ... }:
-
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-      ../common/configuration.nix
-    ];
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [
+    ./hardware-configuration.nix
+    ../common/configuration.nix
+  ];
 
   networking.hostName = "g500s";
   home-manager.users.nebu = import ../../home-manager/g500s/home.nix;
@@ -13,7 +14,7 @@
   users.users.nebu = {
     isNormalUser = true;
     description = "nebu";
-    extraGroups = [ "networkmanager" "wheel" "jellyfin" "docker" ];
+    extraGroups = ["networkmanager" "wheel" "jellyfin" "docker"];
   };
 
   nixpkgs.config.allowUnfree = true;

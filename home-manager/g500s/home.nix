@@ -3,7 +3,6 @@
   pkgs,
   ...
 }: {
-
   imports = [
     inputs.nix-colors.homeManagerModules.default
     ../common/non-gui/git/default.nix

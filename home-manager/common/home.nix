@@ -4,12 +4,21 @@
   outputs,
   ...
 }: {
-
   imports = [
     inputs.nix-colors.homeManagerModules.default
-    ./non-gui/default.nix
+    ./non-gui
     ./xdg.nix
+    ./services
   ];
+
+  # programs.nix-index-database.comma.enable = true;
+  # programs.nix-index.enable = true;
+
+  programs.nix-index = {
+    enable = true;
+    enableZshIntegration = true;
+    # package = ;
+  };
 
   nixpkgs = {
     overlays = [
@@ -26,20 +35,21 @@
     homeDirectory = "/home/nebu";
     packages = with pkgs; [
       (callPackage ../../pkgs/trekscii.nix {})
-      
 
       # TODO: mkdir for nix specific stuff
+      alejandra
       nix-prefetch-github
       nix-search-cli
+      ffmpeg
 
       unicode-emoji
-      (nerdfonts.override { fonts = [
-        "ProFont"
-        "DroidSansMono"
-        # "CaskaydiaMono"
-        # "Martin"
-        "HeavyData"
-      ]; })
+      (nerdfonts.override {
+        fonts = [
+          "ProFont"
+          "DroidSansMono"
+          "HeavyData"
+        ];
+      })
     ];
   };
 

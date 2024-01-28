@@ -1,6 +1,8 @@
-{ pkgs, inputs, ... }:
-
 {
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     # ./nvidia.nix
     ./hardware-configuration.nix
@@ -14,14 +16,13 @@
     enable = true;
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
   };
-  
 
   services.spice-vdagentd.enable = true;
   security = {
     rtkit.enable = true;
     polkit = {
       enable = true;
-      adminIdentities = [ "unix-group:wheel" ];
+      adminIdentities = ["unix-group:wheel"];
     };
   };
 
@@ -37,8 +38,8 @@
         "ollama" = {
           autoStart = true;
           image = "ollama/ollama";
-          volumes = [ "./ollama:/root/.ollama" ];
-          ports = [ "1143:1143" ];
+          volumes = ["./ollama:/root/.ollama"];
+          ports = ["1143:1143"];
         };
       };
     };

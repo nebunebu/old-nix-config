@@ -1,8 +1,4 @@
-{
-  pkgs,
-  ...
-}: {
-
+{pkgs, ...}: {
   imports = [
     ./nixvim/default.nix
     ./tmux/default.nix
@@ -20,12 +16,18 @@
     username = "nebu";
     homeDirectory = "/home/nebu";
     packages = with pkgs; [
+      newsraft
+      ripgrep
+      fd
       ytfzf
+      yt-dlp
+      jq
       ripgrep-all
       lazygit
       distrobox
       pup
       lazygit
+      nitch
     ];
   };
 

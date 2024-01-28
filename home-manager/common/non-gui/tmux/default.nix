@@ -1,6 +1,4 @@
-{ pkgs, ...}:
-
-{
+{pkgs, ...}: {
   programs.tmux = {
     enable = true;
     shell = "${pkgs.zsh}/bin/zsh";
@@ -12,15 +10,15 @@
     newSession = true;
     sensibleOnTop = true;
     terminal = "xterm-kitty";
-    extraConfig = ''
-      set -g allow-passthrough on
-      set -ga update-environment TERM
-      set -ga update-environment TERM_PROGRAM
-      set -g status-position top
-      set -g status-interval 1
-    ''
-      + builtins.readFile ./keybinds.conf
-      ;
+    extraConfig =
+      ''
+        set -g allow-passthrough on
+        set -ga update-environment TERM
+        set -ga update-environment TERM_PROGRAM
+        set -g status-position top
+        set -g status-interval 1
+      ''
+      + builtins.readFile ./keybinds.conf;
 
     plugins = with pkgs.tmuxPlugins; [
       {

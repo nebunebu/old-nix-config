@@ -1,18 +1,14 @@
-{
-  pkgs,
-  ...
-}: {
-
+{pkgs, ...}: {
   imports = [
-     ./theme/default.nix
-     ./fuzzel/default.nix
-     ./hypr/default.nix
-     ./mpv/default.nix
-     ./waybar/default.nix
-     ./sioyek/default.nix
-     ./chromium/default.nix
-     ./firefox/default.nix
-     ./swaync/default.nix
+    ./theme/default.nix
+    ./fuzzel/default.nix
+    ./hypr/default.nix
+    ./mpv/default.nix
+    ./waybar/default.nix
+    ./sioyek/default.nix
+    ./chromium/default.nix
+    ./firefox/default.nix
+    ./swaync/default.nix
   ];
 
   home = {
@@ -24,11 +20,13 @@
       swaynotificationcenter
       waybar-mpris
       # libnotify
-      (nerdfonts.override { fonts = [
-        "DroidSansMono"
-        "JetBrainsMono"
-        "HeavyData"
-      ]; })
+      (nerdfonts.override {
+        fonts = [
+          "DroidSansMono"
+          "JetBrainsMono"
+          "HeavyData"
+        ];
+      })
     ];
   };
 }

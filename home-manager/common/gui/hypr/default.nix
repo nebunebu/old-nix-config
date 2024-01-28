@@ -1,6 +1,8 @@
-{ pkgs, inputs, ... }:
-
 {
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     ./hypr-settings/default.nix
     # ./plugins/default.nix
@@ -12,7 +14,7 @@
     xwayland.enable = true;
     systemd = {
       enable = true;
-      variables = [ "-all" ];
+      variables = ["-all"];
     };
   };
 

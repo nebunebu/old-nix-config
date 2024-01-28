@@ -1,5 +1,8 @@
-{ pkgs, tmuxPlugins, ...}:
-
+{
+  pkgs,
+  tmuxPlugins,
+  ...
+}:
 tmuxPlugins.mkTmuxPlugin {
   pluginName = "rose-pine";
   version = "unstable-2024-01-07";

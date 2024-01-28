@@ -1,16 +1,14 @@
-{ inputs, pkgs, ... }:
-
-{
+{inputs, ...}: {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
     ./core/globals.nix
     ./core/options.nix
-#   ./core/autoCmd.nix
-#   ./core/customFunctions.nix
-#   ./core/highlight.nix
-#   ./core/autoGroups.nix
-#   ./core/userCommands.nix
-#   ./core/filetype.nim
+    # ./core/autoGroups
+    #   ./core/autoCmd.nix
+    #   ./core/customFunctions.nix
+    #   ./core/userCommands.nix
+    #   ./core/filetype.nim
+    ./core/highlight.nix
     ./plugins/default.nix
   ];
 

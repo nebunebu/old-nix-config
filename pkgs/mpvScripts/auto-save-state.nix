@@ -1,7 +1,8 @@
-{ lib
-, fetchurl
-, buildLua }:
-
+{
+  lib,
+  fetchurl,
+  buildLua,
+}:
 buildLua {
   pname = "auto-save-state";
 
@@ -17,6 +18,6 @@ buildLua {
     '';
     homepage = "https://github.com/AN3223/dotfiles/blob/master/.config/mpv/scripts/auto-save-state.lua";
     license = lib.licenses.mit;
-    maintainers = with lib.maintainers; [ nebunebu ];
+    maintainers = with lib.maintainers; [nebunebu];
   };
 }

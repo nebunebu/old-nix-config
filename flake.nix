@@ -23,6 +23,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # nix-index.url = "github:nix-community/nix-index";
+    # nix-index-database.url = "github:nix-community/nix-index-database";
+    # nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
+
     # TODO: add impermanence
     # impermanence.url = "github:nix-community/impermanence";
   };
@@ -30,9 +34,8 @@
   outputs = {
     self,
     nixpkgs,
-    home-manager,
     ...
-  } @inputs: let
+  } @ inputs: let
     inherit (self) outputs;
     systems = [
       "aarch64-linux"
@@ -44,7 +47,6 @@
     forAllSystems = nixpkgs.lib.genAttrs systems;
   in {
     packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
-    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
     overlays = import ./overlays {inherit inputs;};
     nixosModules = import ./modules/nixos;
     homeManagerModules = import ./modules/home-manager;

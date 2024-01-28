@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   home.packages = [
     (pkgs.writeShellScriptBin "power-menu" ''
       SELECTION=$(echo -e "screen off\nreboot\nshutdown" | fuzzel -d -p " " -w 15 -l 3)

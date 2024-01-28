@@ -1,5 +1,8 @@
-{ pkgs, vimUtils, ... }:
-
+{
+  pkgs,
+  vimUtils,
+  ...
+}:
 vimUtils.buildVimPlugin {
   pname = "triptych.nvim";
   version = "2023-01-21";

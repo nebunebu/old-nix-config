@@ -1,6 +1,8 @@
-{ pkgs, inputs, ... }:
-
 {
+  pkgs,
+  inputs,
+  ...
+}: {
   wayland.windowManager.hyprland = {
     plugins = [
       inputs.hyprland-plugins.packages."${pkgs.system}".borders-plus-plus

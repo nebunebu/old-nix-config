@@ -14,9 +14,11 @@
 
   programs.nixvim.plugins = {
     navic.enable = true;
+    project-nvim.enable = true;
     nix.enable = true;
-    # indent-blankline.enable = true;
-    # indent-blankline.scope.enabled = true;
+    oil.enable = true;
+    indent-blankline.enable = true;
+    indent-blankline.scope.enabled = true;
     rainbow-delimiters.enable = true;
     nvim-autopairs.enable = true;
     endwise.enable = true;

@@ -1,6 +1,4 @@
-{ config, ... }:
-
-{
+{config, ...}: {
   imports = [
     ./scripts/default.nix
   ];
@@ -18,10 +16,10 @@
         exit-on-keyboard-focus-loss = "yes";
       };
       dmenu.mode = "text";
-        border = {
-          width = 2;
-          radius = 10;
-        };
+      border = {
+        width = 2;
+        radius = 10;
+      };
       colors = {
         background = "${config.colorScheme.colors.base00}ff";
         text = "${config.colorScheme.colors.base05}ff";

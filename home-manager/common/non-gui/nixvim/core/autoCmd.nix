@@ -1,10 +1,9 @@
 {
-
   programs.nixvim.autoCmd = [
     {
-       event = [ "BufRead" "BufNewFile" ];
-       pattern = [ "*.conf" ];
-       command = "set filetype=conf";
+      event = ["BufRead" "BufNewFile"];
+      pattern = ["*.conf"];
+      command = "set filetype=conf";
     }
   ];
 }

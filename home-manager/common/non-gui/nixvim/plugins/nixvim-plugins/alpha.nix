@@ -42,7 +42,7 @@
           {
             command = "<CMD>e $HOME/.nix-config/flake.nix<CR>";
             desc = " nix-config";
-            shortcut = "h";
+            shortcut = "c";
           }
           {
             command = ":qa<CR>";

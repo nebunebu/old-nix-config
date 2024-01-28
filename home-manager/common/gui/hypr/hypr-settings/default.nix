@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   imports = [
     ./window-rules.nix
     ./keybinds.nix
@@ -25,8 +23,6 @@
       env = WLR_NO_HARDWARE_CURSORS, 1
     '';
     settings = {
-      exec = [ "hypr-start" ];
-
       input = {
         "kb_layout" = "us";
         "kb_options" = "caps:escape";

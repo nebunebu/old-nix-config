@@ -6,10 +6,10 @@
   pkgs,
   ...
 }: {
-
   imports = [
     inputs.home-manager.nixosModules.home-manager
-    ./sops/default.nix
+    ./dotool.nix
+    # ./sops/default.nix
   ];
 
   boot.loader = {
@@ -42,19 +42,18 @@
   networking.networkmanager.enable = true;
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs outputs; };
+    extraSpecialArgs = {inherit inputs outputs;};
   };
 
   users.users = {
     nebu = {
       isNormalUser = true;
-      # openssh.authorizedKeys.keys = [
-      #   # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
-      # ];
       shell = pkgs.zsh;
       extraGroups = [
         "wheel"
         "docker"
+        "input"
+        "uinput"
       ];
     };
   };
@@ -102,17 +101,17 @@
     })
     config.nix.registry;
 
-  nix  = {
+  nix = {
     settings = {
-      experimental-features = [ "nix-command flakes" ];
+      experimental-features = ["nix-command flakes"];
       auto-optimise-store = true;
-      allowed-users = [ "@wheel" ];
-      trusted-users = [ "@wheel" ];
+      allowed-users = ["@wheel"];
+      trusted-users = ["@wheel"];
     };
-  gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 7d";
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
     };
     nixPath = [
       "nixpkgs=${pkgs.path}"
@@ -121,7 +120,9 @@
 
   environment = {
     systemPackages = [
-      pkgs.git pkgs.sops pkgs.wl-clipboard
+      pkgs.git
+      pkgs.sops
+      pkgs.wl-clipboard
     ];
     sessionVariables = {
       EDITOR = "nvim";
@@ -142,7 +143,7 @@
     rtkit.enable = true;
     polkit = {
       enable = true;
-      adminIdentities = [ "unix-group:wheel" ];
+      adminIdentities = ["unix-group:wheel"];
     };
   };
 

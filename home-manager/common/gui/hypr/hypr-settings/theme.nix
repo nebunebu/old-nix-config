@@ -1,16 +1,13 @@
-{ config, ...}:
-
-{
-  wayland.windowManager.hyprland.settings 
-  = with config.colorScheme.colors; {
-    "$color-gray0"  = "0xff${base05}";
-    "$color-gray1"  = "0xff${base03}";
-    "$color-gray2"  = "0xff${base07}";
-    "$color-red"    = "0xff${base08}";
+{config, ...}: {
+  wayland.windowManager.hyprland.settings = with config.colorScheme.colors; {
+    "$color-gray0" = "0xff${base05}";
+    "$color-gray1" = "0xff${base03}";
+    "$color-gray2" = "0xff${base07}";
+    "$color-red" = "0xff${base08}";
     "$color-yellow" = "0xff${base09}";
-    "$color-tan"    = "0xff${base0A}";
-    "$color-dteal"  = "0xff${base0B}";
-    "$color-lteal"  = "0xff${base0C}";
+    "$color-tan" = "0xff${base0A}";
+    "$color-dteal" = "0xff${base0B}";
+    "$color-lteal" = "0xff${base0C}";
     "$color-purple" = "0xff${base0D}";
 
     general = {
@@ -47,8 +44,8 @@
 
     windowrulev2 = [
       "bordercolor $color-purple, fullscreen:1"
-      "bordercolor $color-lteal, floating:1" 
-      "bordercolor $color-red, pinned:1" 
+      "bordercolor $color-lteal, floating:1"
+      "bordercolor $color-red, pinned:1"
     ];
   };
 }

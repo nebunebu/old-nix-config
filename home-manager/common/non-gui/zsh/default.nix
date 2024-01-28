@@ -1,6 +1,8 @@
-{ pkgs, config, ... }:
-
 {
+  pkgs,
+  config,
+  ...
+}: {
   programs = {
     starship.enable = true;
     zsh = {
@@ -9,16 +11,21 @@
       enableCompletion = true;
       enableVteIntegration = true;
       dotDir = ".config/zsh";
-      loginExtra = /* bash */ ''
-        # if [ "$(tty)" = "/dev/tty1" ]; then
-        #   exec Hyprland
-        # fi
-      '';
+      loginExtra =
+        /*
+        bash
+        */
+        ''
+          # if [ "$(tty)" = "/dev/tty1" ]; then
+          #   exec Hyprland
+          # fi
+        '';
 
       # localVariables = {
       #   CLIPBOARD = "wlp";
       # };
-      initExtra = builtins.readFile ./zsh-fzf-kill.zsh
+      initExtra =
+        builtins.readFile ./zsh-fzf-kill.zsh
         # + builtins.readFile ./zsh-clipboard.zsh
         # + builtins.readFile ./zsh-starship-fix.zsh
         ;

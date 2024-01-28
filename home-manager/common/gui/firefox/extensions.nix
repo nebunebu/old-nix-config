@@ -1,8 +1,5 @@
-{ inputs, ... }:
-
-{
-  programs.firefox.profiles.nebu.extensions =
-  with inputs.firefox-addons.packages."x86_64-linux"; [
+{inputs, ...}: {
+  programs.firefox.profiles.nebu.extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
     ublock-origin
     vimium
     i-dont-care-about-cookies

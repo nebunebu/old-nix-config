@@ -1,7 +1,10 @@
-{ config, lib, pkgs, ... }:
-
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 # Stuff for nvidia proprietary drivers I don't actually use
-
 {
   hardware = {
     nvidia = {
@@ -21,9 +24,7 @@
     ];
   };
 
-
-  boot.initrd.kernelModules = [ "nvidia" ];
-  services.xserver.videoDrivers = [ "nvidia" ];
+  boot.initrd.kernelModules = ["nvidia"];
+  services.xserver.videoDrivers = ["nvidia"];
   nixpkgs.config.nvidia.acceptLicense = true;
 }
-

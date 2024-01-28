@@ -1,5 +1,7 @@
-{
+{pkgs, ...}: {
+  imports = [./hypr-start.nix];
   wayland.windowManager.hyprland.settings = {
+    exec-once = "hypr-start";
     monitor = [
       "DP-1, 1920x1080, 0x0, 1"
       "DP-2, 1920x1080, 1920x0, 1"

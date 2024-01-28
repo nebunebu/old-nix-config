@@ -3,7 +3,6 @@
   config,
   ...
 }: {
-
   imports = [
     inputs.sops-nix.nixosModules.sops
   ];
@@ -17,33 +16,12 @@
 
     templates."tuir.secrets" = {
       owner = "nebu";
-      path = "/home/nebu/.config/tuir/tuir.secrets";
-      content = ''
-        imgur_client_id = ${config.sops.placeholder.imgur_client_id}
-        oauth_client_id = ${config.sops.placeholder.oauth_client_id}
-        oauth_client_secret = ${config.sops.placeholder.oauth_client_secret}
+      path = "/home/nebu/demo/tuir.secrets";
+      content = with config.sops.placeholder; ''
+        imgur_client_id = ${imgur_client_id}
+        oauth_client_id = ${oauth_client_id}
+        oauth_client_secret = ${oauth_client_secret}
       '';
     };
   };
-
-   # systemd.services."sometestservice" = {
-   #   script = ''
-   #   echo "
-   #     I'm a service sending a secure password 
-   #     $(cat ${config.sops.secrets."example_key".path})
-   #     " > /var/lib/sometestservice/testfile
-   #   '';
-   #   serviceConfig = {
-   #     User = "sometestservice";
-   #     WorkingDirectory = "/var/lib/sometestservice";
-   #   };
-   # };
-   #
-   # users.users.sometestservice = {
-   #   home = "/var/lib/sometestservice";
-   #   createHome = true;
-   #   isSystemUser = true;
-   #   group = "sometestservice";
-   # };
-   # users.groups.sometestservice = {};
 }

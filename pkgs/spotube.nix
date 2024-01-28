@@ -1,19 +1,17 @@
-{ lib
-, stdenv
-, fetchurl
-
-, autoPatchelfHook
-, dpkg
-, makeWrapper
-, wrapGAppsHook
-
-, libappindicator
-, libnotify
-, libsecret
-, mpv-unwrapped
-, xdg-user-dirs
+{
+  lib,
+  stdenv,
+  fetchurl,
+  autoPatchelfHook,
+  dpkg,
+  makeWrapper,
+  wrapGAppsHook,
+  libappindicator,
+  libnotify,
+  libsecret,
+  mpv-unwrapped,
+  xdg-user-dirs,
 }:
-
 stdenv.mkDerivation (finalAttrs: {
   pname = "spotube";
   version = "3.4.0";
@@ -54,8 +52,8 @@ stdenv.mkDerivation (finalAttrs: {
   postFixup = ''
     makeWrapper $out/share/spotube/spotube $out/bin/spotube \
         "''${gappsWrapperArgs[@]}" \
-        --prefix LD_LIBRARY_PATH : $out/share/spotube/lib:${lib.makeLibraryPath [ mpv-unwrapped ]} \
-        --prefix PATH : ${lib.makeBinPath [ xdg-user-dirs ]}
+        --prefix LD_LIBRARY_PATH : $out/share/spotube/lib:${lib.makeLibraryPath [mpv-unwrapped]} \
+        --prefix PATH : ${lib.makeBinPath [xdg-user-dirs]}
   '';
 
   meta = {
@@ -67,8 +65,8 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://spotube.netlify.app/";
     license = lib.licenses.bsdOriginal;
-    maintainers = with lib.maintainers; [ tomasajt ];
-    platforms = [ "x86_64-linux" ];
-    sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
+    maintainers = with lib.maintainers; [tomasajt];
+    platforms = ["x86_64-linux"];
+    sourceProvenance = with lib.sourceTypes; [binaryNativeCode];
   };
 })

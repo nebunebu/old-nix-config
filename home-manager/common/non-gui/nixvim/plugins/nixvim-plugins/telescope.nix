@@ -2,7 +2,7 @@
   programs.nixvim.plugins.telescope = {
     enable = true;
     extensions = {
-      # project-nvim.enable = true;
+      project-nvim.enable = true;
       fzf-native = {
         enable = true;
         caseMode = "smart_case";

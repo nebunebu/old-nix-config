@@ -8,9 +8,9 @@ stdenvNoCC.mkDerivation rec {
   version = "2024-01-17";
   src = fetchFromGitHub {
     owner = "nimatrueway";
-    repo  = "mpv-locatefile-lua-script";
-    rev   = "e813f75ed8d07b254ca79663cf8cc665915159b8";
-    sha256  = "sha256-shDTn2ZyEaxXd/ci0wlxJlxfP8vkl67qjGfD7MTReuE=";
+    repo = "mpv-locatefile-lua-script";
+    rev = "e813f75ed8d07b254ca79663cf8cc665915159b8";
+    sha256 = "sha256-shDTn2ZyEaxXd/ci0wlxJlxfP8vkl67qjGfD7MTReuE=";
   };
   dontBuild = true;
   dontUnpack = true;
