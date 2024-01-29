@@ -1,6 +1,5 @@
 {
   description = "My nix config";
-
   inputs = {
     hardware.url = "github:nixos/nixos-hardware";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";

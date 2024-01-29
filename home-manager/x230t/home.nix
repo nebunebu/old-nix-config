@@ -4,7 +4,6 @@
   ...
 }: {
   imports = [
-    inputs.nix-colors.homeManagerModules.default
     ./nixvim/default.nix
     ./tmux/default.nix
     ./zsh/default.nix
@@ -39,8 +38,6 @@
     homeDirectory = "/home/nebu";
   };
 
-  programs.home-manager.enable = true;
-  programs.git.enable = true;
   systemd.user.startServices = "sd-switch";
   home.stateVersion = "23.11";
 }

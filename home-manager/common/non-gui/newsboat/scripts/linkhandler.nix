@@ -52,7 +52,7 @@
           # >/dev/null 2>&1\
           # || setsid -f w3m "$url"\
           # >/dev/null 2>&1
-          setsid -f firefox -new-window "$url"; sleep 5; { echo key alt+ctrl+b; } | dotool
+          setsid -f firefox -new-window "$url"; sleep 2.5; { echo key alt+ctrl+b; } | dotool
       esac
     '')
   ];

@@ -28,37 +28,23 @@
 
   colorScheme = inputs.nix-colors.colorSchemes.rose-pine;
 
-  programs.go = {
-    enable = true;
-    goBin = ".config/go/bin.go";
-    goPath = ".config/go/go";
-  };
-
   home = {
     username = "nebu";
     homeDirectory = "/home/nebu";
-    packages = builtins.attrValues {
-      nerdfonts =
-        pkgs.callPackage
-        (pkgs.nerdfonts.override {
-          fonts = [
-            "DroidSansMono"
-            "JetBrainsMono"
-            "HeavyData"
-          ];
-        });
-      inherit
-        (pkgs)
-        ripgrep-all
-        distrobox
-        swaynotificationcenter
-        ytfzf
-        libnotify
-        ;
-    };
+
+    packages = [
+      (pkgs.nerdfonts.override {
+        fonts = [
+          "DroidSansMono"
+          "JetBrainsMono"
+          "HeavyData"
+        ];
+      })
+    ];
   };
 
   programs.home-manager.enable = true;
+  # programs.git.enable = true;
   systemd.user.startServices = "sd-switch";
   home.stateVersion = "23.11";
 }

@@ -17,6 +17,7 @@
     packages = builtins.attrValues {
       inherit
         (pkgs)
+        libnotify
         swww
         spotube
         swaynotificationcenter

@@ -9,6 +9,7 @@
     ./fzf/default.nix
     ./tuir/default.nix
     ./newsboat/default.nix
+    ./newsraft
   ];
 
   home = {
@@ -17,13 +18,15 @@
     packages = builtins.attrValues {
       inherit
         (pkgs)
-        newsraft
-        ripgrep
+        # newsraft # should do this with overrides
+        
         fd
+        ripgrep
+        ripgrep-all
+        ffmpeg
         ytfzf
         yt-dlp
         jq
-        ripgrep-all
         distrobox
         pup
         lazygit
