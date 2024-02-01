@@ -13,10 +13,16 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
+    hyprland-contrib = {
+      url = "github:hyprwm/contrib";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    pyprland.url = "github:hyprland-community/pyprland";
     nix-colors.url = "github:misterio77/nix-colors";
     nixvim.url = "github:nix-community/nixvim/nixos-23.11";
     sops-nix.url = "github:Mic92/sops-nix";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
+    tuido.url = "gitlab:Oglo12/tuido";
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -65,13 +71,13 @@
           ./hosts/g500s/configuration.nix
         ];
       };
-      # x230t = nixpkgs.lib.nixosSystem {
-      #   system = "x86_64-linux";
-      #   specialArgs = {inherit inputs outputs;};
-      #   modules = [
-      #     ./hosts/x230t/configuration.nix
-      #   ];
-      # };
+      x230t = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = {inherit inputs outputs;};
+        modules = [
+          ./hosts/x230t/configuration.nix
+        ];
+      };
     };
   };
 }

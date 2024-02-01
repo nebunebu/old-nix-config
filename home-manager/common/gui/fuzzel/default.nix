@@ -1,4 +1,6 @@
-{config, ...}: {
+{config, ...}: let
+  c = config.colorScheme.palette;
+in {
   imports = [
     ./scripts/default.nix
   ];
@@ -21,13 +23,13 @@
         radius = 10;
       };
       colors = {
-        background = "${config.colorScheme.colors.base00}ff";
-        text = "${config.colorScheme.colors.base05}ff";
-        match = "${config.colorScheme.colors.base0B}ff";
-        selection = "${config.colorScheme.colors.base0B}ff";
-        selection-text = "${config.colorScheme.colors.base00}ff";
-        selection-match = "${config.colorScheme.colors.base0E}ff";
-        border = "${config.colorScheme.colors.base0D}ff";
+        background = "${c.base00}ff";
+        text = "${c.base05}ff";
+        match = "${c.base0B}ff";
+        selection = "${c.base0B}ff";
+        selection-text = "${c.base00}ff";
+        selection-match = "${c.base0E}ff";
+        border = "${c.base0D}ff";
       };
     };
   };

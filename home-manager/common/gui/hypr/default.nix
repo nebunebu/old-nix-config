@@ -4,8 +4,10 @@
   ...
 }: {
   imports = [
-    ./hypr-settings/default.nix
-    # ./plugins/default.nix
+    ./hypr-settings
+    # ./contrib
+    # ./plugins
+    # ./pyprland
   ];
 
   wayland.windowManager.hyprland = {
@@ -26,6 +28,7 @@
     # pkgs.libsForQt5.polkit-kde-agent
     inherit
       (pkgs)
+      swww
       wl-clipboard
       wf-recorder
       grim

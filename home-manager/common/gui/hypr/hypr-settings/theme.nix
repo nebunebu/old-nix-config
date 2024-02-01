@@ -1,5 +1,5 @@
 {config, ...}: let
-  c = config.colorScheme.colors;
+  c = config.colorScheme.palette;
 in {
   wayland.windowManager.hyprland.settings = {
     "$color-gray0" = "0xff${c.base05}";

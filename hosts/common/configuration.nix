@@ -126,6 +126,8 @@
     ];
     sessionVariables = {
       EDITOR = "nvim";
+      #FIX: Don't hard code user
+      # MANPATH = "/home/nebu/.nix-profile/share/man";
     };
   };
 

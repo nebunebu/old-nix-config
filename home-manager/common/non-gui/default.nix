@@ -9,7 +9,7 @@
     ./fzf/default.nix
     ./tuir/default.nix
     ./newsboat/default.nix
-    ./newsraft
+    # ./newsraft
   ];
 
   home = {
@@ -21,6 +21,7 @@
         # newsraft # should do this with overrides
         
         fd
+        bottom
         ripgrep
         ripgrep-all
         ffmpeg

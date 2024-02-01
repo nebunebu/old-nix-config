@@ -22,15 +22,15 @@ in {
     };
   };
 
-  systemd.user.services.tuir-init = {
-    Install.WantedBy = ["default.target"];
-    Service = {
-      Type = "simple";
-      # TODO: Rewrite using sed
-      ExecStart = "${pkgs.writeShellScript "tuir-cat" ''
-        ${cat} ${tuir-init} ${tuir-secrets} > ${tuir-cfg}
-        ${rm} ${tuir-init} ${tuir-secrets}
-      ''}";
-    };
-  };
+  # systemd.user.services.tuir-init = {
+  #   Install.WantedBy = ["default.target"];
+  #   Service = {
+  #     Type = "simple";
+  #     # TODO: Rewrite using sed
+  #     ExecStart = "${pkgs.writeShellScript "tuir-cat" ''
+  #       ${cat} ${tuir-init} ${tuir-secrets} > ${tuir-cfg}
+  #       ${rm} ${tuir-init} ${tuir-secrets}
+  #     ''}";
+  #   };
+  # };
 }

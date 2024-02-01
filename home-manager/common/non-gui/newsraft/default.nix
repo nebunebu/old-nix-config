@@ -1,21 +1,20 @@
-{pkgs, ...}:
-# let
-#   newsraft = pkgs.newsraft.overrideAttrs (oldAttrs: {
-#     inherit (oldAttrs) name;
-#     version = "0.23";
-#     src = pkgs.fetchFromGitea {
-#       domain = "codeberg.org";
-#       owner = "newsraft";
-#       repo = "newsraft";
-#       rev = "7d3676057a51d1e15de8c1a3064dce9efd0461ae";
-#       sha256 = "sha256-c5yN67FL4siPyO8v0RuTCznwrqX9+r8tY5PKS4zlqIc=";
-#     };
-#   });
-# in {
 {
-  home = {
-    packages = [
-      pkgs.newsraft-latest
-    ];
+  pkgs,
+  outputs,
+  ...
+}: {
+  imports = [
+    outputs.homeManagerModules.newsraft
+  ];
+  programs.newsraft = {
+    enable = true;
+    package = pkgs.unstable.newsraft;
+    config = ''
+      bind b exec xdg-open "%l"
+    '';
+    feeds = ''
+      https://www.youtube.com/feeds/videos.xml?channel_id=UCTUYHL3XgAYmVChdlK_vnVQ "Comedy Enforement"
+      https://dotfyle.com/this-week-in-neovim/rss.xml "This Week in Neovim"
+    '';
   };
 }

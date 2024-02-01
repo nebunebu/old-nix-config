@@ -4,18 +4,6 @@
     ./keybinds.nix
     ./theme.nix
   ];
-  home = {
-    # file = {
-    #   ".config/hypr/pyprland.toml".source = ./pyprland.toml;
-    # };
-    packages = builtins.attrValues {
-      inherit
-        (pkgs)
-        # pyprland
-        
-        ;
-    };
-  };
 
   wayland.windowManager.hyprland = {
     # extraConfig = ''
@@ -40,7 +28,6 @@
         "enable_swallow" = "true";
         "swallow_regex" = [
           "kitty"
-          "ytfzf"
         ];
       };
     };

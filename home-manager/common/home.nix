@@ -33,6 +33,7 @@
     homeDirectory = "/home/nebu";
 
     packages = [
+      pkgs.invidtui
       (pkgs.nerdfonts.override {
         fonts = [
           "DroidSansMono"
@@ -44,6 +45,7 @@
   };
 
   programs.home-manager.enable = true;
+  programs.bash.enable = true;
   # programs.git.enable = true;
   systemd.user.startServices = "sd-switch";
   home.stateVersion = "23.11";

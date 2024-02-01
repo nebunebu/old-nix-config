@@ -13,15 +13,16 @@
             ;;
         esac
       }
+
       shutdown_confirm() {
-          SELECTION=$(echo -e "confirm shutdown\ncancel shutdown" | fuzzel -d -p " " -w 15 -l 2)
-          case $SELCTION in
-            "confirm shutdown")
-              reboot
-              ;;
-            *)
-              ;;
-          esac
+        SELECTION=$(echo -e "confirm shutdown\ncancel shutdown" | fuzzel -d -p " " -w 15 -l 2)
+        case $SELCTION in
+          "confirm shutdown")
+            reboot
+            ;;
+          *)
+            ;;
+        esac
       }
 
       case $SELECTION in

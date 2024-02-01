@@ -28,7 +28,6 @@
       "$mainMod, I, exec, firefox"
       "$mainMod, P, exec, fuzzel"
       "$mainMod, D, exec, distrobox enter arch -- discord-screenaudio"
-      "$mainMod, U, exec, waydroid app launch com.android.deskclock"
 
       "$mainMod, H, movefocus, l"
       "$mainMod, L, movefocus, r"

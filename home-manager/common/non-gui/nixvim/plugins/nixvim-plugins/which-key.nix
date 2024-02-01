@@ -65,10 +65,13 @@
             { "<cmd>Telescope projects<CR>",
               "Find in projects"
             },
+            g =
+            { "<cmd>Telescope live_grep<CR>",
+              "Find with live_grep"
+            },
           },
         },
       }, {mode = "n"})
-
 
       wk.register({
         ["<"] = {
