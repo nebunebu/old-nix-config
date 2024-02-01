@@ -34,6 +34,7 @@
 
     packages = [
       pkgs.invidtui
+      pkgs.noto-fonts
       (pkgs.nerdfonts.override {
         fonts = [
           "DroidSansMono"
