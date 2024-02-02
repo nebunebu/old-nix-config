@@ -1,5 +1,9 @@
 {
-  programs.nixvim.plugins.which-key.enable = true;
+  programs.nixvim.plugins.which-key = {
+    enable = true;
+    plugins.marks = true;
+  };
+
   programs.nixvim.extraConfigLua =
     /*
     lua
