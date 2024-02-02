@@ -1,18 +1,18 @@
 {
   programs.nixvim = {
     plugins = {
-      luasnip.enable = true;
       nvim-cmp = {
         enable = true;
         snippet.expand = "luasnip";
         autoEnableSources = true;
         sources = [
+          {name = "cmp_nvim_lsp";}
           {name = "nvim_lsp";}
           {name = "nvim_lsp_signature_help";}
-          {name = "path";}
-          {name = "buffer";}
-          {name = "cmp_luasnip";}
           {name = "luasnip";}
+          {name = "path";}
+          # {name = "buffer";}
+          {name = "cmp_luasnip";}
         ];
         window = {
           completion.border = ["╭" "─" "╮" "│" "╯" "─" "╰" "│"];

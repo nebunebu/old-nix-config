@@ -5,13 +5,12 @@
       ublock-origin
       vimium
       i-dont-care-about-cookies
-      bukubrow
-      enhanced-github
       reddit-enhancement-suite
       old-reddit-redirect
       ;
   };
 }
+# bukubrow
 # view-image
 # search-by-image
 # sourcegraph

@@ -10,6 +10,7 @@
     ./cmp.nix
     ./none-ls.nix
     ./mkdnflow.nix
+    ./luasnip.nix
   ];
 
   programs.nixvim.plugins = {

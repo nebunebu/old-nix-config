@@ -11,7 +11,7 @@ in {
 
   programs.swww = [
     {
-      monitor = "DP-1";
+      monitor = "LVDS-1";
       wallpaper = "${wDir}/wallhaven-qzpv5q.jpg";
     }
   ];

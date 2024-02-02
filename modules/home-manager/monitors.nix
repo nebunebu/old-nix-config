@@ -1,8 +1,4 @@
-{
-  lib,
-  config,
-  ...
-}: {
+{lib, ...}: {
   options.monitors = lib.mkOption {
     type = lib.types.listOf (lib.types.submodule {
       options = {

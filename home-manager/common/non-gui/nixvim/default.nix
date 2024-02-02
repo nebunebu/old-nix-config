@@ -14,6 +14,7 @@
 
   programs.nixvim = {
     enable = true;
+    enableMan = true;
     clipboard.providers.wl-copy.enable = true;
   };
 }

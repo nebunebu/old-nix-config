@@ -1,27 +1,28 @@
 {
   programs.firefox.profiles.nebu.bookmarks = [
     {
-      name = "wikipedia";
-      tags = ["wiki"];
-      keyword = "wiki";
-      url = "https://en.wikipedia.org/wiki/Special:Search?search=%s&go=Go";
-    }
-    {
-      name = "kernel.org";
-      url = "https://www.kernel.org";
-    }
-    {
       name = "Nix sites";
       toolbar = true;
       bookmarks = [
         {
-          name = "homepage";
-          url = "https://nixos.org/";
+          name = "nixpkgs search";
+          url = "https://search.nixos.org/packages";
         }
         {
-          name = "wiki";
-          tags = ["wiki" "nix"];
-          url = "https://nixos.wiki/";
+          name = "noogle.dev";
+          url = "https://noogle.dev";
+        }
+        {
+          name = "nix.dev";
+          url = "https://nix.dev";
+        }
+        {
+          name = "Home Manager Options";
+          url = "https://mipmip.github.io/home-manager-option-search/";
+        }
+        {
+          name = "nixos.org";
+          url = "https://nixos.org/";
         }
       ];
     }
