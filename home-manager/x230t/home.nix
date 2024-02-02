@@ -1,8 +1,8 @@
 {
   imports = [
-    # ../common/home.nix
-    # ./swww
-    # ./hyprland
-    # ./waybar
+    ../common/home.nix
+    ./swww
+    ./hyprland
+    ./waybar
   ];
 }

@@ -51,9 +51,12 @@
       shell = pkgs.zsh;
       extraGroups = [
         "wheel"
+        "networkmanager"
         "docker"
         "input"
         "uinput"
+        "audio"
+        "libvirtd"
       ];
     };
   };
@@ -126,8 +129,6 @@
     ];
     sessionVariables = {
       EDITOR = "nvim";
-      #FIX: Don't hard code user
-      # MANPATH = "/home/nebu/.nix-profile/share/man";
     };
   };
 
@@ -156,23 +157,6 @@
       pkgs.xdg-desktop-portal-gtk
     ];
   };
-  # This setups a SSH server. Very important if you're setting up a headless system.
-  # Feel free to remove if you don't need it.
-  # services.openssh = {
-  #   enable = true;
-  #   settings = {
-  #     # Forbid root login through SSH.
-  #     PermitRootLogin = "no";
-  #     # Use keys only. Remove if you want to SSH using password (not recommended)
-  #     # PasswordAuthentication = false;
-  #   };
-  # };
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
 
   system.stateVersion = "23.11";
 }

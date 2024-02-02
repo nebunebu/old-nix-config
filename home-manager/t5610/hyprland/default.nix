@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{
   imports = [./hypr-start.nix];
   wayland.windowManager.hyprland.settings = {
     exec-once = "hypr-start";
