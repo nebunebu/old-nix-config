@@ -43,15 +43,15 @@
       };
 
       plugins = [
-        # {
-        #   name = "zsh-system-clipboard";
-        #   src = pkgs.fetchFromGitHub {
-        #     owner = "kutsan";
-        #     repo = "zsh-system-clipboard";
-        #     rev = "v0.8.0";
-        #     sha256 = "sha256-VWTEJGudlQlNwLOUfpo0fvh0MyA2DqV+aieNPx/WzSI=";
-        #   };
-        # }
+        {
+          name = "nix-zsh-completions";
+          src = pkgs.fetchFromGitHub {
+            owner = "nix-community";
+            repo = "nix-zsh-completions";
+            rev = "a7c8781b5a18026fbc3edb36397931526f243590";
+            hash = "sha256-JStpIKU+jU6TkXToTONfdEhLjaASGzC+tRmSJRiqKWU=";
+          };
+        }
         {
           name = "zsh-autopair";
           src = pkgs.fetchFromGitHub {
@@ -106,6 +106,15 @@
             sha256 = "sha256-xbchXJTFWeABTwq6h4KWLh+EvydDrDzcY9AQVK65RS8=";
           };
         }
+        # {
+        #   name = "zsh-system-clipboard";
+        #   src = pkgs.fetchFromGitHub {
+        #     owner = "kutsan";
+        #     repo = "zsh-system-clipboard";
+        #     rev = "v0.8.0";
+        #     sha256 = "sha256-VWTEJGudlQlNwLOUfpo0fvh0MyA2DqV+aieNPx/WzSI=";
+        #   };
+        # }
         # {
         #   name = "zsh-nix-shell";
         #   file = "nix-shell.plugin.zsh";

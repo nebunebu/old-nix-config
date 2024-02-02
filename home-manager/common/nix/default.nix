@@ -2,6 +2,7 @@
   home.packages = builtins.attrValues {
     inherit
       (pkgs)
+      nix-output-monitor
       alejandra
       nurl
       comma

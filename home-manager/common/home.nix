@@ -11,6 +11,7 @@
     ./gui
     ./services
     ./xdg.nix
+    ./ags
   ];
 
   programs.nix-index = {
@@ -33,6 +34,7 @@
     homeDirectory = "/home/nebu";
 
     packages = [
+      inputs.tuido.packages.x86_64-linux.default
       pkgs.invidtui
       pkgs.noto-fonts
       (pkgs.nerdfonts.override {

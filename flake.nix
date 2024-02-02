@@ -18,6 +18,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     pyprland.url = "github:hyprland-community/pyprland";
+    ags.url = "github:Aylur/ags";
     nix-colors.url = "github:misterio77/nix-colors";
     nixvim.url = "github:nix-community/nixvim/nixos-23.11";
     sops-nix.url = "github:Mic92/sops-nix";
