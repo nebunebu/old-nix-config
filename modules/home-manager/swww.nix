@@ -8,6 +8,7 @@
   entryToStr = x: "${pkgs.swww}/bin/swww img -o ${x.monitor} ${x.wallpaper}";
 in {
   options = {
+    # rewrite with enable to add package
     programs.swww = lib.mkOption {
       type = with lib.types;
         listOf (submodule {
