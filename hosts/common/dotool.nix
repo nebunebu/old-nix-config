@@ -5,7 +5,7 @@
     input = {};
   };
 
-  users.users.me = {
+  users.users.nebu = {
     isNormalUser = true;
     extraGroups = ["wheel" "input" "uinput"];
   };

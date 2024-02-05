@@ -35,6 +35,8 @@
 
     packages = [
       inputs.tuido.packages.x86_64-linux.default
+      pkgs.tree
+      pkgs.lf
       pkgs.invidtui
       pkgs.noto-fonts
       (pkgs.nerdfonts.override {
