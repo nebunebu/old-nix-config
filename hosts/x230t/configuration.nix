@@ -9,7 +9,7 @@
   ];
 
   networking = {
-    hostName = "x230";
+    hostName = "x230t";
     networkmanager.enable = true;
   };
 
@@ -22,6 +22,6 @@
   };
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
-    HOSTNAME = "x230";
+    HOSTNAME = "x230t";
   };
 }
