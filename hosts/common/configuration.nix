@@ -140,6 +140,7 @@
       enableSSHSupport = true;
     };
     dconf.enable = true;
+    virt-manager.enable = true;
   };
 
   security = {

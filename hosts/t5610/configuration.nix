@@ -9,6 +9,9 @@
     ../common/configuration.nix
   ];
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-19.1.9"
+  ];
   networking.hostName = "t5610";
   home-manager.users.nebu =
     import ../../home-manager/t5610/home.nix;
@@ -31,9 +34,13 @@
     };
   };
 
+  environment.systemPackages = [
+    pkgs.etcher
+  ];
+
   virtualisation = {
     libvirtd.enable = true;
-    waydroid.enable = true;
+    waydroid.enable = false;
     docker = {
       enable = true;
     };

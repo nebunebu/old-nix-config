@@ -28,6 +28,7 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    NixVirt.url = "https://flakehub.com/f/AshleyYakeley/NixVirt/*.tar.gz";
 
     # nix-index.url = "github:nix-community/nix-index";
     # nix-index-database.url = "github:nix-community/nix-index-database";
