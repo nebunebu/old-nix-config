@@ -37,9 +37,10 @@
   environment.systemPackages = [
     pkgs.etcher
   ];
-
+  networking.firewall.trustedInterfaces = ["virbr0"];
   virtualisation = {
     libvirtd.enable = true;
+    libvirtd.onBoot = "start";
     waydroid.enable = false;
     docker = {
       enable = true;
