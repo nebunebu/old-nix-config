@@ -70,13 +70,6 @@
           ./hosts/t5610/configuration.nix
         ];
       };
-      t5610s = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = {inherit inputs outputs;};
-        modules = [
-          ./hosts/t5610s/configuration.nix
-        ];
-      };
       g500s = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = {inherit inputs outputs;};
