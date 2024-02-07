@@ -6,7 +6,7 @@
   imports = [
     ./hardware-configuration.nix
     ../common/configuration.nix
-    ./impermanance.nix
+    ./impermanence.nix
     ./disko.nix
   ];
 
