@@ -18,7 +18,7 @@ in {
 
     templates."tuir.secrets" = {
       owner = "nebu";
-      path = "/home/nebu/demo/tuir.secrets";
+      path = "/home/nebu/.config/tuir/tuir.secrets";
       content = ''
         imgur_client_id = ${p.imgur_client_id}
         oauth_client_id = ${p.oauth_client_id}

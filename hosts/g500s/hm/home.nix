@@ -1,4 +1,4 @@
-{inputs, ...}: {
+{
   imports = [
     ../common/non-gui/git/default.nix
     ../common/non-gui/nixvim/default.nix

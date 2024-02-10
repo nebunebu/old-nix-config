@@ -13,6 +13,11 @@
     ];
 
     bind = [
+      # Move to /home-manager/t5610
+      "$mainMod+ALT_L, L, movewindow, mon:DP-2"
+      "$mainMod+ALT_L, H, movewindow, mon:DP-1"
+      ###########################################
+
       "$mainMod, INSERT, exec, power-menu"
       ",XF86KbdBrightnessDown, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
       ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_SINK@ toggle"
@@ -53,6 +58,16 @@
       "$mainMod SHIFT, 7, movetoworkspace, 7"
       "$mainMod SHIFT, 8, movetoworkspace, 8"
       "$mainMod SHIFT, 9, movetoworkspace, 9"
+
+      # "$mainMod SHIFT, 1, movetoworkspacesilent, 1"
+      # "$mainMod SHIFT, 2, movetoworkspacesilent, 2"
+      # "$mainMod SHIFT, 3, movetoworkspacesilent, 3"
+      # "$mainMod SHIFT, 4, movetoworkspacesilent, 4"
+      # "$mainMod SHIFT, 5, movetoworkspacesilent, 5"
+      # "$mainMod SHIFT, 6, movetoworkspacesilent, 6"
+      # "$mainMod SHIFT, 7, movetoworkspacesilent, 7"
+      # "$mainMod SHIFT, 8, movetoworkspacesilent, 8"
+      # "$mainMod SHIFT, 9, movetoworkspacesilent, 9"
     ];
   };
 }

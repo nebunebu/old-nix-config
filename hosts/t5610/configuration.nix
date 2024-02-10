@@ -4,7 +4,6 @@
   ...
 }: {
   imports = [
-    # ./nvidia.nix
     ./hardware-configuration.nix
     ../common/configuration.nix
   ];
@@ -13,8 +12,7 @@
     "electron-19.1.9"
   ];
   networking.hostName = "t5610";
-  home-manager.users.nebu =
-    import ../../home-manager/t5610/home.nix;
+  home-manager.users.nebu = import ./hm;
 
   programs.hyprland = {
     enable = true;

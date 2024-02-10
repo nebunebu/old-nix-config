@@ -1,19 +1,29 @@
-{config, ...}: let
+{
+  config,
+  pkgs,
+  ...
+}: let
   nbxmls = "${config.xdg.configHome}/newsboat/xmls";
 in {
-  imports = [./full-yt/default.nix];
+  imports = [
+    ./full-yt/default.nix
+  ];
+
+  systemd.user.services.newsboat-init = {
+    Install.WantedBy = ["default.target"];
+    Service = {
+      Type = "simple";
+      ExecStart = "${pkgs.writeShellScript "url-sub" ''
+        ${pkgs.coreutils}/bin/cat "hello" >> /home/nebu/.config/newsboat/urls
+      ''}";
+    };
+  };
 
   programs.newsboat = {
     urls = [
       # {
-      #   tags = [ "podcasts" ];
-      #   title = "redbar";
-      #   url = "https://redbarradio.net/feed/rbr";
-      # }
-      # {
-      #   tags = [ "yt" "chess" ];
-      #   title = "Ben S Chess";
-      #   url = "https://www.scriptbarrel.com/xml.cgi?channel_id=UCzGoTD4RMsbUJCQcnWs0DRw";
+      #   title = "${config.sops.secrets.twitch.path}";
+      #   url = "lol";
       # }
       {
         tags = ["neovim" "articles"];
@@ -55,6 +65,16 @@ in {
         title = "Vimjoyer";
         url = "https://www.scriptbarrel.com/xml.cgi?channel_id=UC_zBdZ0_H_jn41FDRG7q4Tw";
       }
+      # {
+      #   tags = [ "podcasts" ];
+      #   title = "redbar";
+      #   url = "https://redbarradio.net/feed/rbr";
+      # }
+      # {
+      #   tags = [ "yt" "chess" ];
+      #   title = "Ben S Chess";
+      #   url = "https://www.scriptbarrel.com/xml.cgi?channel_id=UCzGoTD4RMsbUJCQcnWs0DRw";
+      # }
       {
         tags = ["yt" "nix"];
         title = "IogaMaster";

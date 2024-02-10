@@ -9,7 +9,7 @@
   ];
 
   networking.hostName = "g500s";
-  home-manager.users.nebu = import ../../home-manager/g500s/home.nix;
+  home-manager.users.nebu = import ./hm/home.nix;
 
   users.users.nebu = {
     isNormalUser = true;
