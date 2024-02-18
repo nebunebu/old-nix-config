@@ -21,7 +21,7 @@
         shellcheck.enable = true;
       };
       formatting = {
-        alejandra.enable = true;
+        nixpkgs_fmt.enable = true;
         beautysh.enable = true;
         fourmolu.enable = true;
         jq.enable = true;

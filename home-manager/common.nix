@@ -31,7 +31,7 @@
 
       tree
       nix-output-monitor
-      alejandra
+      nixpkgs-fmt
       nurl
       comma
       statix
@@ -42,7 +42,6 @@
       ripgrep
       ripgrep-all
       ffmpeg
-      ytfzf
       yt-dlp
       jq
       distrobox
@@ -67,6 +66,7 @@
 
   programs.home-manager.enable = true;
   programs.bash.enable = true;
+  programs.zsh.enable = true;
   systemd.user.startServices = "sd-switch";
   home.stateVersion = "23.11";
 }

@@ -29,10 +29,11 @@
       "$mainMod, F, togglefloating"
       "$mainMod, V, exec, cliphist-menu"
 
+      "$mainMod + SHIFT, Return, exec, kitty"
       "$mainMod, Return, exec, kitty zsh -c \"tmux new-session -A -s \"main\"\""
       "$mainMod, I, exec, firefox"
       "$mainMod, P, exec, fuzzel"
-      "$mainMod, D, exec, distrobox enter arch -- discord-screenaudio"
+      # "$mainMod, D, exec, distrobox enter arch -- discord-screenaudio"
 
       "$mainMod, H, movefocus, l"
       "$mainMod, L, movefocus, r"

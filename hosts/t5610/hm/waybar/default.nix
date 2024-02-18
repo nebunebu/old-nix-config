@@ -1,13 +1,13 @@
 {pkgs, ...}: {
   imports = [
     ./style.nix
+    # ../../../../home-manager/programs/swaync
   ];
 
   home = {
     packages = builtins.attrValues {
       inherit
         (pkgs)
-        swaynotificationcenter
         waybar-mpris
         ;
     };
