@@ -33,6 +33,7 @@
     ags.url = "github:Aylur/ags";
     nix-colors.url = "github:misterio77/nix-colors";
     nixvim.url = "github:nix-community/nixvim/nixos-23.11";
+    prism.url = "github:IogaMaster/prism";
     sops-nix.url = "github:Mic92/sops-nix";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
     firefox-addons = {

@@ -3,7 +3,8 @@
 , ...
 }:
 let
-  wDir = "${config.home.homeDirectory}/.nix-config/home-manager/common/gui/theme/wallpapers";
+  # wDir = "${config.home.homeDirectory}/.nix-config/home-manager/common/gui/theme/wallpapers";
+  outPath = "${config.xdg.configHome}/wallpapers"; # Where in your home directory to output to.
 in
 {
   imports = [
@@ -13,11 +14,11 @@ in
   programs.swww = [
     {
       monitor = "DP-1";
-      wallpaper = "${wDir}/wallhaven-qzpv5q.jpg";
+      wallpaper = "${outPath}/wallhaven-5gjwv1.jpg";
     }
     {
       monitor = "DP-2";
-      wallpaper = "${wDir}/wallhaven-d6vm2l.jpg";
+      wallpaper = "${outPath}/wallhaven-g71vdq.jpg";
     }
   ];
 }
