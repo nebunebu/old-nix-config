@@ -28,7 +28,6 @@
     unstable.webcord-vencord
     unstable.newsraft
     unstable.spotube
-
     # For ags
     playerctl
     unstable.libdbusmenu-gtk3
