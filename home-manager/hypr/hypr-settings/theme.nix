@@ -1,11 +1,13 @@
-{config, ...}: let
+{ config, ... }:
+let
   c = config.colorScheme.palette;
   c-gray = "0xff${c.base07}";
   c-red = "0xff${c.base08}";
   c-yellow = "0xff${c.base09}";
   c-lteal = "0xff${c.base0C}";
   c-purple = "0xff${c.base0D}";
-in {
+in
+{
   wayland.windowManager.hyprland = {
     settings = {
       general = {

@@ -1,8 +1,6 @@
+{ pkgs, inputs, ... }:
+
 {
-  pkgs,
-  inputs,
-  ...
-}: {
   imports = [
     ./hypr-settings
     # ./contrib
@@ -16,7 +14,7 @@
     xwayland.enable = true;
     systemd = {
       enable = true;
-      variables = ["-all"];
+      variables = [ "-all" ];
     };
   };
 

@@ -1,6 +1,8 @@
-{config, ...}: let
+{ config, ... }:
+let
   c = config.colorScheme.palette;
-in {
+in
+{
   programs.waybar = {
     style =
       /*

@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, outputs, ... }: {
   imports = [
     ../../../home-manager/common.nix
     ../../../home-manager/hypr
@@ -12,14 +12,13 @@
     ../../../home-manager/programs/fuzzel
     ../../../home-manager/programs/mpv
     ../../../home-manager/programs/ytfzf
-    ../../../home-manager/programs/newsraft
+    # ../../../home-manager/programs/newsraft
     ../../../home-manager/programs/firefox
     ../../../home-manager/programs/chromium
     ../../../home-manager/theme
     ../../../home-manager/programs/ags
     ../../../home-manager/programs/taskwarrior
     ../../../home-manager/programs/sioyek
-
     ./hyprland
     ./swww
     # ./waybar
@@ -27,6 +26,8 @@
 
   home.packages = with pkgs; [
     unstable.webcord-vencord
+    unstable.newsraft
+    unstable.spotube
 
     # For ags
     playerctl

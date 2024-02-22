@@ -17,6 +17,6 @@
     ignorecase = true;
     smartcase = true;
     incsearch = true;
-    fillchars = {eob = " ";};
+    fillchars = { eob = " "; };
   };
 }

@@ -1,16 +1,16 @@
-{
-  lib,
-  stdenv,
-  fetchurl,
-  autoPatchelfHook,
-  dpkg,
-  makeWrapper,
-  wrapGAppsHook,
-  libappindicator,
-  libnotify,
-  libsecret,
-  mpv-unwrapped,
-  xdg-user-dirs,
+{ lib
+, stdenv
+, fetchurl
+, autoPatchelfHook
+, dpkg
+, makeWrapper
+, wrapGAppsHook
+, libappindicator
+, libnotify
+, libsecret
+, mpv-unwrapped
+, xdg-user-dirs
+,
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "spotube";
@@ -65,8 +65,8 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://spotube.netlify.app/";
     license = lib.licenses.bsdOriginal;
-    maintainers = with lib.maintainers; [tomasajt];
-    platforms = ["x86_64-linux"];
-    sourceProvenance = with lib.sourceTypes; [binaryNativeCode];
+    maintainers = with lib.maintainers; [ tomasajt ];
+    platforms = [ "x86_64-linux" ];
+    sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
   };
 })

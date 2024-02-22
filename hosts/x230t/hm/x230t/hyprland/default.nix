@@ -1,5 +1,5 @@
 {
-  imports = [./hypr-start.nix];
+  imports = [ ./hypr-start.nix ];
   wayland.windowManager.hyprland.settings = {
     exec-once = "hypr-start";
     monitor = [

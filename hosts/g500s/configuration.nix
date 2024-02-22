@@ -1,7 +1,6 @@
-{
-  config,
-  pkgs,
-  ...
+{ config
+, pkgs
+, ...
 }: {
   imports = [
     ./hardware-configuration.nix
@@ -14,7 +13,7 @@
   users.users.nebu = {
     isNormalUser = true;
     description = "nebu";
-    extraGroups = ["networkmanager" "wheel" "jellyfin" "docker"];
+    extraGroups = [ "networkmanager" "wheel" "jellyfin" "docker" ];
   };
 
   nixpkgs.config.allowUnfree = true;

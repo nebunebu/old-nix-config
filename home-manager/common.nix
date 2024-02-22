@@ -1,8 +1,7 @@
-{
-  inputs,
-  pkgs,
-  outputs,
-  ...
+{ inputs
+, pkgs
+, outputs
+, ...
 }: {
   imports = [
     inputs.nix-colors.homeManagerModules.default
@@ -27,8 +26,6 @@
     username = "nebu";
     homeDirectory = "/home/nebu";
     packages = with pkgs; [
-      inputs.tuido.packages.x86_64-linux.default
-
       tree
       nix-output-monitor
       nixpkgs-fmt

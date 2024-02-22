@@ -1,10 +1,10 @@
-{
-  lib,
-  buildGoModule,
-  fetchFromGitHub,
-  yt-dlp,
-  ffmpeg,
-  mpv,
+{ lib
+, buildGoModule
+, fetchFromGitHub
+, yt-dlp
+, ffmpeg
+, mpv
+,
 }:
 buildGoModule rec {
   pname = "invidtui";
@@ -32,7 +32,7 @@ buildGoModule rec {
     homepage = "https://darkhz.github.io/invidtui/";
     description = "An invidious TUI client";
     license = licenses.mit;
-    maintainers = with maintainers; [rettetdemdativ];
+    maintainers = with maintainers; [ rettetdemdativ ];
     mainProgram = "invidtui";
   };
 }

@@ -1,10 +1,9 @@
-{
-  inputs,
-  outputs,
-  lib,
-  config,
-  pkgs,
-  ...
+{ inputs
+, outputs
+, lib
+, config
+, pkgs
+, ...
 }: {
   imports = [
     inputs.home-manager.nixosModules.home-manager
@@ -42,7 +41,7 @@
   networking.networkmanager.enable = true;
 
   home-manager = {
-    extraSpecialArgs = {inherit inputs outputs;};
+    extraSpecialArgs = { inherit inputs outputs; };
   };
 
   users.users = {
@@ -94,22 +93,22 @@
     };
   };
 
-  nix.registry = (lib.mapAttrs (_: flake: {inherit flake;})) ((lib.filterAttrs (_: lib.isType "flake")) inputs);
+  nix.registry = (lib.mapAttrs (_: flake: { inherit flake; })) ((lib.filterAttrs (_: lib.isType "flake")) inputs);
 
   environment.etc =
     lib.mapAttrs'
-    (name: value: {
-      name = "nix/path/${name}";
-      value.source = value.flake;
-    })
-    config.nix.registry;
+      (name: value: {
+        name = "nix/path/${name}";
+        value.source = value.flake;
+      })
+      config.nix.registry;
 
   nix = {
     settings = {
-      experimental-features = ["nix-command flakes"];
+      experimental-features = [ "nix-command flakes" ];
       auto-optimise-store = true;
-      allowed-users = ["@wheel"];
-      trusted-users = ["@wheel"];
+      allowed-users = [ "@wheel" ];
+      trusted-users = [ "@wheel" ];
     };
     gc = {
       automatic = true;
@@ -147,7 +146,7 @@
     rtkit.enable = true;
     polkit = {
       enable = true;
-      adminIdentities = ["unix-group:wheel"];
+      adminIdentities = [ "unix-group:wheel" ];
     };
   };
 

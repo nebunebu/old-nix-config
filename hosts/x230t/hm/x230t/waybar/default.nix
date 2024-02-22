@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   imports = [
     ./style.nix
   ];
@@ -23,8 +23,8 @@
         output = [
           "LVDS-1"
         ];
-        modules-left = ["hyprland/workspaces"];
-        modules-right = ["battery" "pulseaudio" "clock" "tray"];
+        modules-left = [ "hyprland/workspaces" ];
+        modules-right = [ "battery" "pulseaudio" "clock" "tray" ];
 
         "pulseaudio" = {
           "format" = "{volume}% {icon} {format_source}";
@@ -40,7 +40,7 @@
             "phone" = "";
             "portable" = "";
             "car" = "";
-            "default" = ["" "" ""];
+            "default" = [ "" "" "" ];
           };
           "on-click" = "pavucontrol";
         };

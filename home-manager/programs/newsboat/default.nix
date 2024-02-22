@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   imports = [
     ./scripts/linkhandler.nix
     # ./scripts/redbar-dl.nix
@@ -12,6 +12,6 @@
       builtins.readFile ./confs/keybinds.conf
       + builtins.readFile ./confs/colors.conf
       # + builtins.readFile ./confs/browser.conf
-      ;
+    ;
   };
 }

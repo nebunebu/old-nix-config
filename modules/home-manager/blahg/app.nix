@@ -1,8 +1,7 @@
-{
-  writeShellApplication,
-  pkgs,
-  config,
-  ...
+{ writeShellApplication
+, pkgs
+, config
+, ...
 }:
 # let
 #   cfg = config.program.blahg;
@@ -12,7 +11,7 @@
 # in
 writeShellApplication {
   name = "blahgc";
-  runtimeInputs = [pkgs.cowsay];
+  runtimeInputs = [ pkgs.cowsay ];
   text = ''
 
     _texgrep() {

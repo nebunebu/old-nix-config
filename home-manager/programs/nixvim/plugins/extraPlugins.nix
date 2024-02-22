@@ -1,8 +1,8 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   programs.nixvim = {
     extraPlugins = [
-      {plugin = pkgs.triptych-nvim;}
-      {plugin = pkgs.vimPlugins.marks-nvim;}
+      { plugin = pkgs.triptych-nvim; }
+      { plugin = pkgs.vimPlugins.marks-nvim; }
       # {plugin = pkgs.telescope-vim-bookmarks-nvim;}
       # {plugin = pkgs.vimPlugins.firenvim;}
       {

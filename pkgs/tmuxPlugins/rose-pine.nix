@@ -1,7 +1,6 @@
-{
-  pkgs,
-  tmuxPlugins,
-  ...
+{ pkgs
+, tmuxPlugins
+, ...
 }:
 tmuxPlugins.mkTmuxPlugin {
   pluginName = "rose-pine";

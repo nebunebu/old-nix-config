@@ -5,6 +5,7 @@
   imports = [
     ./hardware-configuration.nix
     ../common/configuration.nix
+    ./hydra.nix
   ];
 
   nixpkgs.config.permittedInsecurePackages = [

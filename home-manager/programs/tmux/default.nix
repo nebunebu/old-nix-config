@@ -1,6 +1,8 @@
-{pkgs, ...}: let
+{ pkgs, ... }:
+let
   t = pkgs.tmuxPlugins;
-in {
+in
+{
   programs.tmux = {
     enable = true;
     shell = "${pkgs.zsh}/bin/zsh";

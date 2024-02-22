@@ -6,7 +6,7 @@
 
   programs.nixvim.extraConfigLua =
     /*
-    lua
+      lua
     */
     ''
       require("which-key").setup({})

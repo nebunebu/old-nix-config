@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   imports = [
     ./style.nix
     # ../../../../home-manager/programs/swaync
@@ -23,7 +23,7 @@
         output = [
           "DP-1"
         ];
-        modules-left = ["hyprland/workspaces"];
+        modules-left = [ "hyprland/workspaces" ];
         modules-right = [
           "custom/waybarmpris"
           "custom/notification"
@@ -72,8 +72,8 @@
         output = [
           "DP-2"
         ];
-        modules-left = ["hyprland/workspaces"];
-        modules-right = ["pulseaudio" "clock" "tray"];
+        modules-left = [ "hyprland/workspaces" ];
+        modules-right = [ "pulseaudio" "clock" "tray" ];
 
         "pulseaudio" = {
           "format" = "{volume}% {icon} {format_source}";
@@ -89,7 +89,7 @@
             "phone" = "";
             "portable" = "";
             "car" = "";
-            "default" = ["" "" ""];
+            "default" = [ "" "" "" ];
           };
           "on-click" = "pavucontrol";
         };

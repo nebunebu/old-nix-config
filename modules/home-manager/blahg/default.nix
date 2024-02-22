@@ -1,16 +1,17 @@
-{
-  pkgs,
-  config,
-  lib,
-  ...
-}: let
+{ pkgs
+, config
+, lib
+, ...
+}:
+let
   cfg = config.programs.blahg;
   src = "${cfg.directory}/src";
   dst = "${cfg.directory}/dst";
   tmp = "${cfg.directory}/tmp";
   xml = "${src}/partials/header.xml";
   html = "${src}/partials/header.html";
-in {
+in
+{
   options = {
     programs.blahg = {
       enable = lib.mkOption {

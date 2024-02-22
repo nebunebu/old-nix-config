@@ -1,7 +1,6 @@
-{
-  inputs,
-  pkgs,
-  ...
+{ inputs
+, pkgs
+, ...
 }: {
   imports = [
     ./hardware-configuration.nix
@@ -14,7 +13,7 @@
   };
 
   home-manager.users.nebu =
-    import ../../home-manager/x230t/home.nix;
+    import ./hm/home.nix;
 
   programs.hyprland = {
     enable = true;

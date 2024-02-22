@@ -1,7 +1,6 @@
-{
-  pkgs,
-  config,
-  ...
+{ pkgs
+, config
+, ...
 }: {
   home.file = {
     ".config/tuir/tuir.cfg.init".source = ./tuir.cfg;
@@ -18,7 +17,7 @@
   };
 
   systemd.user.services.tuir-init = {
-    Install.WantedBy = ["default.target"];
+    Install.WantedBy = [ "default.target" ];
     Service = {
       Type = "simple";
       ExecStart = with config.xdg; "${pkgs.writeShellScript "tuir-cat" ''

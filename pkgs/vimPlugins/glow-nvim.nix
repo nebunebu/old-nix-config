@@ -1,10 +1,10 @@
-{
-  lib,
-  buildGoModule,
-  fetchFromGitHub,
-  installShellFiles,
-  stdenv,
-  fetchpatch,
+{ lib
+, buildGoModule
+, fetchFromGitHub
+, installShellFiles
+, stdenv
+, fetchpatch
+,
 }:
 buildGoModule rec {
   pname = "glow";
@@ -36,9 +36,9 @@ buildGoModule rec {
 
   doCheck = false;
 
-  ldflags = ["-s" "-w" "-X=main.Version=${version}"];
+  ldflags = [ "-s" "-w" "-X=main.Version=${version}" ];
 
-  nativeBuildInputs = [installShellFiles];
+  nativeBuildInputs = [ installShellFiles ];
   postInstall = lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
     installShellCompletion --cmd glow \
       --bash <($out/bin/glow completion bash) \
@@ -51,7 +51,7 @@ buildGoModule rec {
     homepage = "https://github.com/charmbracelet/glow";
     changelog = "https://github.com/charmbracelet/glow/releases/tag/v${version}";
     license = licenses.mit;
-    maintainers = with maintainers; [Br1ght0ne penguwin];
+    maintainers = with maintainers; [ Br1ght0ne penguwin ];
     mainProgram = "glow";
   };
 }

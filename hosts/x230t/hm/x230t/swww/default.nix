@@ -1,10 +1,11 @@
-{
-  outputs,
-  config,
-  ...
-}: let
+{ outputs
+, config
+, ...
+}:
+let
   wDir = "${config.home.homeDirectory}/.nix-config/home-manager/common/gui/theme/wallpapers";
-in {
+in
+{
   imports = [
     outputs.homeManagerModules.swww
   ];

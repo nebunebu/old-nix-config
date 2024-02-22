@@ -1,7 +1,6 @@
-{
-  config,
-  pkgs,
-  ...
+{ config
+, pkgs
+, ...
 }: {
   # Stuff for nvidia proprietary drivers I don't actually use
   hardware = {
@@ -14,8 +13,7 @@
   };
 
   environment = {
-    sessionVariables = {
-    };
+    sessionVariables = { };
     systemPackages = builtins.attrValues {
       inherit
         (pkgs)
@@ -25,7 +23,7 @@
     };
   };
 
-  boot.initrd.kernelModules = ["nvidia"];
-  services.xserver.videoDrivers = ["nvidia"];
+  boot.initrd.kernelModules = [ "nvidia" ];
+  services.xserver.videoDrivers = [ "nvidia" ];
   nixpkgs.config.nvidia.acceptLicense = true;
 }

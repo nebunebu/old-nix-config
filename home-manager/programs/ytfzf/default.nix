@@ -1,7 +1,6 @@
-{
-  pkgs,
-  config,
-  ...
+{ pkgs
+, config
+, ...
 }: {
   home.packages = with pkgs; [
     ytfzf
@@ -9,7 +8,7 @@
 
   xdg.configFile."ytfzf/conf.sh".text =
     /*
-    sh
+      sh
     */
     # NOTE: ytfzf is not using configured mpv instance
     ''

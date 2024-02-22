@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   home.packages = [
     (pkgs.writeShellScriptBin "linkhandler" ''
       #!/run/current-system/sw/bin/bash

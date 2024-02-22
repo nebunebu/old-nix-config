@@ -1,14 +1,14 @@
-{
-  lib,
-  stdenv,
-  fetchFromGitea,
-  pkg-config,
-  curl,
-  expat,
-  gumbo,
-  ncurses,
-  sqlite,
-  yajl,
+{ lib
+, stdenv
+, fetchFromGitea
+, pkg-config
+, curl
+, expat
+, gumbo
+, ncurses
+, sqlite
+, yajl
+,
 }:
 stdenv.mkDerivation rec {
   pname = "newsraft";
@@ -22,16 +22,16 @@ stdenv.mkDerivation rec {
     hash = "sha256-c5yN67FL4siPyO8v0RuTCznwrqX9+r8tY5PKS4zlqIc=";
   };
 
-  nativeBuildInputs = [pkg-config];
-  buildInputs = [curl expat gumbo ncurses sqlite yajl];
+  nativeBuildInputs = [ pkg-config ];
+  buildInputs = [ curl expat gumbo ncurses sqlite yajl ];
 
-  makeFlags = ["PREFIX=$(out)"];
+  makeFlags = [ "PREFIX=$(out)" ];
 
   meta = with lib; {
     description = "Feed reader for terminal";
     homepage = "https://codeberg.org/grisha/newsraft";
     license = licenses.isc;
-    maintainers = with maintainers; [arthsmn];
+    maintainers = with maintainers; [ arthsmn ];
     mainProgram = "newsraft";
     platforms = platforms.all;
   };

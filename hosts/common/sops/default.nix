@@ -1,10 +1,11 @@
-{
-  inputs,
-  config,
-  ...
-}: let
+{ inputs
+, config
+, ...
+}:
+let
   p = config.sops.placeholder;
-in {
+in
+{
   imports = [
     inputs.sops-nix.nixosModules.sops
   ];
@@ -12,9 +13,9 @@ in {
   sops = {
     defaultSopsFile = ../../../secrets/secrets.yaml;
     age.keyFile = "/home/nebu/.config/sops/age/keys.txt";
-    secrets.imgur_client_id = {};
-    secrets.oauth_client_id = {};
-    secrets.oauth_client_secret = {};
+    secrets.imgur_client_id = { };
+    secrets.oauth_client_id = { };
+    secrets.oauth_client_secret = { };
 
     templates."tuir.secrets" = {
       owner = "nebu";

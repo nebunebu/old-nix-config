@@ -1,7 +1,6 @@
-{
-  pkgs,
-  vimUtils,
-  ...
+{ pkgs
+, vimUtils
+, ...
 }:
 vimUtils.buildVimPlugin {
   pname = "triptych.nvim";

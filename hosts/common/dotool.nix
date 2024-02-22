@@ -1,13 +1,13 @@
-{pkgs, ...}: {
-  environment.systemPackages = [pkgs.dotool];
+{ pkgs, ... }: {
+  environment.systemPackages = [ pkgs.dotool ];
 
   users.groups = {
-    input = {};
+    input = { };
   };
 
   users.users.nebu = {
     isNormalUser = true;
-    extraGroups = ["wheel" "input" "uinput"];
+    extraGroups = [ "wheel" "input" "uinput" ];
   };
 
   # makes dotool work

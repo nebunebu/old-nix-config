@@ -1,7 +1,9 @@
 # This could prob just be in common
-{config, ...}: let
+{ config, ... }:
+let
   c = config.colorScheme.palette;
-in {
+in
+{
   programs.waybar = {
     style =
       /*

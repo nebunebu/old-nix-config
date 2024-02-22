@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   # This can probably just be put in common/home.nix
   home.packages = [
     (pkgs.writeShellScriptBin "hypr-start" ''

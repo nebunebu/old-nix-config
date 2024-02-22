@@ -1,12 +1,12 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
+{ config
+, lib
+, pkgs
+, ...
 }:
 with lib; let
   cfg = config.programs.newsraft;
-in {
+in
+{
   options = {
     programs.newsraft = {
       enable = mkOption {
@@ -78,8 +78,8 @@ in {
   };
 
   config = mkIf cfg.enable {
-    home.packages = [cfg.package];
+    home.packages = [ cfg.package ];
     xdg.configFile."newsraft/config".text = cfg.extraConfig;
-    xdg.configFile."newsraft/feeds" = mkIf (cfg.feeds != {}) {text = feedsFileContents;};
+    xdg.configFile."newsraft/feeds" = mkIf (cfg.feeds != { }) { text = feedsFileContents; };
   };
 }

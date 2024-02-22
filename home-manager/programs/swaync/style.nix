@@ -1,11 +1,13 @@
-{config, ...}: let
+{ config, ... }:
+let
   c = config.colorScheme.palette;
   background = "${c.base00}ff";
   c-red = config.colorScheme.palette.base08;
-in {
+in
+{
   xdg.configFile."swaync/style.css".text =
     /*
-    css
+      css
     */
     ''
       @define-color cc-bg rgba(0, 0, 0, 0.7);

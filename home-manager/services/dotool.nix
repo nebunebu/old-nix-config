@@ -1,7 +1,6 @@
-{
-  pkgs,
-  lib,
-  ...
+{ pkgs
+, lib
+, ...
 }: {
   systemd.user.services.dotoold = {
     Unit = {
@@ -21,6 +20,6 @@
       Restart = "always";
       RestartSec = 10;
     };
-    Install = {WantedBy = ["default.target"];};
+    Install = { WantedBy = [ "default.target" ]; };
   };
 }

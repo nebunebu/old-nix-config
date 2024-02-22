@@ -1,7 +1,7 @@
 {
   xdg.configFile."swaync/configSchema.json".text =
     /*
-    json
+      json
     */
     ''
       {

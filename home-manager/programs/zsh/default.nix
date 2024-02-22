@@ -1,7 +1,6 @@
-{
-  pkgs,
-  config,
-  ...
+{ pkgs
+, config
+, ...
 }: {
   programs = {
     starship.enable = true;
@@ -28,7 +27,7 @@
         builtins.readFile ./zsh-fzf-kill.zsh
         # + builtins.readFile ./zsh-clipboard.zsh
         # + builtins.readFile ./zsh-starship-fix.zsh
-        ;
+      ;
 
       history = {
         path = "${config.xdg.configHome}/zsh/zsh_history";

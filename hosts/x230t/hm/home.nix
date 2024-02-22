@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   imports = [
     ../common/home.nix
@@ -5,4 +6,6 @@
     ./hyprland
     ./waybar
   ];
+
+  home.packages = [ pkgs.unstable.newsraft ];
 }
