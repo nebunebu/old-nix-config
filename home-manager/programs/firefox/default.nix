@@ -1,11 +1,5 @@
 { inputs, ... }:
 {
-  imports = [
-    ./bookmarks.nix
-    ./extensions.nix
-    ./css.nix
-  ];
-  # programs.browserpass.browsers = [ "firefox" ];
   programs.firefox = {
     enable = true;
     profiles.nebu = {
