@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./hypr-settings
+    ./settings
     # ./plugins
     # ./pyprland
   ];
