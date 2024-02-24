@@ -18,6 +18,16 @@
         reddit-enhancement-suite
         old-reddit-redirect
       ];
+      userChrome =
+        /*
+      css
+        */
+        ''
+          * {
+            font-family: "DroidSansM Nerd Font" !important;
+            font-family: "DroidSansM Nerd Font Mono" !important;
+          };
+        '';
 
     };
     profiles.noogle = {
