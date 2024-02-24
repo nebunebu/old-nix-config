@@ -3,8 +3,8 @@
 {
   imports = [
     ./settings
+    ./pyprland
     # ./plugins
-    # ./pyprland
   ];
 
   wayland.windowManager.hyprland = {
