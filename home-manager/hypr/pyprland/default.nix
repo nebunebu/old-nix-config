@@ -12,34 +12,28 @@
       windowrulev2 = [
         "float, class:^(kitty-btm)$"
         "float, class:^(spotube)$"
-        # "center, class:^(mpv)$"
-        # "animation popin, class:^(mpv)$"
-        # "size 85%, class:^(mpv)$"
-        #
-        # "float, class:^(firefox)$"
-        # "center, class:^(firefox)$"
-        # "animation popin, class:^(firefox)$"
-        # "size 85%, class:^(firefox)$"
       ];
       bind = [
-        # "$mainMod+ALT_L, L, movewindow, mon:DP-2"
-        # "$mainMod, c, exec, pypr toggle btm"
-        "$mainMod, c, exec, pypr toggle spo"
+        "ALT_L, b, exec, pypr toggle btm"
+        "ALT_L, s, exec, pypr toggle spo"
+        "ALT_L, n, exec, pypr toggle noogle"
+        "ALT_L, p, exec, pypr toggle nixpkgs"
+        "ALT_L, h, exec, pypr toggle hm-options"
+        "ALT_L, l, exec, pypr toggle lichess"
       ];
 
     };
 
-    extraConfig = ''
-      bind = $mainMod, S, submap, scratchpad
-      submap = scratchpad
-
-      bind = , B, exec, pypr show btm
-      bind = , S, exec, pypr show spo
-
-      bind = , escape, exec, pypr hide btm
-      bind = , escape, exec, pypr hide spo
-      bind = , escape, submap, reset
-      submap = reset
-    '';
+    # NOTE: for creating a submap
+    #   extraConfig = ''
+    #     bind = $mainMod, S, submap, scratchpad
+    #     submap = scratchpad
+    #     bind = , B, exec, pypr show btm
+    #     bind = , S, exec, pypr show spo
+    #     bind = , escape, exec, pypr hide btm
+    #     bind = , escape, exec, pypr hide spo
+    #     bind = , escape, submap, reset
+    #     submap = reset
+    #   '';
   };
 }
