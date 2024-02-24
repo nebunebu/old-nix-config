@@ -25,10 +25,6 @@
       url = "github:hyprwm/hyprland-plugins";
       # inputs.hyprland.follows = "hyprland";
     };
-    hyprland-contrib = {
-      url = "github:hyprwm/contrib";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     pyprland.url = "github:hyprland-community/pyprland";
     ags.url = "github:Aylur/ags";
     nix-colors.url = "github:misterio77/nix-colors";

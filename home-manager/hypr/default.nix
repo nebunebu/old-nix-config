@@ -3,7 +3,6 @@
 {
   imports = [
     ./hypr-settings
-    # ./contrib
     # ./plugins
     # ./pyprland
   ];
