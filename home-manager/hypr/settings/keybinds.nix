@@ -14,8 +14,8 @@
 
     bind = [
       # Move to /home-manager/t5610
-      "$mainMod+ALT_L, L, movewindow, mon:DP-2"
-      "$mainMod+ALT_L, H, movewindow, mon:DP-1"
+      "$mainMod + SHIFT, N, movewindow, mon:DP-1"
+      "$mainMod + SHIFT, M, movewindow, mon:DP-2"
       ###########################################
 
       "$mainMod, INSERT, exec, power-menu"
@@ -44,8 +44,6 @@
       "$mainMod + SHIFT, L, movewindow, r"
       "$mainMod + SHIFT, K, movewindow, u"
       "$mainMod + SHIFT, J, movewindow, d"
-      "$mainMod + SHIFT, N, movewindow, mon:DP-1"
-      "$mainMod + SHIFT, M, movewindow, mon:DP-2"
 
       "$mainMod, 1, workspace, 1"
       "$mainMod, 2, workspace, 2"
