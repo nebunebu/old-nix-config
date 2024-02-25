@@ -39,6 +39,7 @@
         ip = "ip --color=\"auto\"";
         tadd = "task add +capture";
         ol = "docker exec -it ollama ollama";
+        kimg = "kitty +kitten icat";
       };
 
       plugins = [
