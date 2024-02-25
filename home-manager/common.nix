@@ -8,6 +8,8 @@
     ./prism
   ];
 
+  # programs.thunderbird.enable = true;
+
   programs.nix-index = {
     enable = true;
     enableZshIntegration = true;
@@ -27,6 +29,7 @@
     username = "nebu";
     homeDirectory = "/home/nebu";
     packages = with pkgs; [
+      thunderbird
       tree
       nix-output-monitor
       nixpkgs-fmt
