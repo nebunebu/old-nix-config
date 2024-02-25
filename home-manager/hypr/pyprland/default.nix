@@ -2,10 +2,7 @@
 {
   home.packages = [ inputs.pyprland.packages.x86_64-linux.default ];
 
-  xdg.configFile."pyprland.toml" = {
-    source = ./pyprland.toml;
-    target = "hypr/pyprland.toml";
-  };
+  imports = [ ./pyprland.nix ];
 
   wayland.windowManager.hyprland = {
     settings = {
