@@ -40,7 +40,7 @@
         tadd = "task add +capture";
         ol = "docker exec -it ollama ollama";
         kimg = "kitty +kitten icat";
-        cat = "bat";
+        # cat = "bat";
       };
 
       plugins = [
