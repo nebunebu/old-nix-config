@@ -17,6 +17,7 @@
     ../../../home-manager/programs/chromium
     ../../../home-manager/theme
     ../../../home-manager/programs/ags
+    ../../../home-manager/programs/bat
     ../../../home-manager/programs/taskwarrior
     ../../../home-manager/programs/sioyek
     ../../../home-manager/programs/lf
