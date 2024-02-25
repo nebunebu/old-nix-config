@@ -19,6 +19,7 @@
     ../../../home-manager/programs/ags
     ../../../home-manager/programs/taskwarrior
     ../../../home-manager/programs/sioyek
+    ../../../home-manager/programs/lf
     ./hyprland
     ./swww
     # ./waybar

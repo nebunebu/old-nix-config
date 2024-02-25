@@ -52,7 +52,6 @@
 
       libnotify
       tree
-      lf
       invidtui
       noto-fonts
       (nerdfonts.override {
