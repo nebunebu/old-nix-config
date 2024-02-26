@@ -103,6 +103,7 @@
       })
       config.nix.registry;
 
+
   nix = {
     settings = {
       experimental-features = [ "nix-command flakes" ];
