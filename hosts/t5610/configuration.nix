@@ -15,6 +15,7 @@
   networking.hostName = "t5610";
   home-manager.users.nebu = import ./hm;
 
+
   programs.hyprland = {
     enable = true;
     # package = inputs.hyprland.packages."${pkgs.system}".hyprland;
