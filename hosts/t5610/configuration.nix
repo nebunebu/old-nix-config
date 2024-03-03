@@ -31,7 +31,14 @@
       adminIdentities = [ "unix-group:wheel" ];
     };
   };
-  environment.systemPackages = [
-    pkgs.etcher
+
+  # programs.seahorse.enable = true;
+  environment.systemPackages = with pkgs; [
+    etcher
+    pass-wayland
+    qtpass
+    passExtensions.pass-otp
+    passExtensions.pass-import
+    passExtensions.pass-checkup
   ];
 }
