@@ -21,6 +21,7 @@
     ../../../home-manager/programs/taskwarrior
     ../../../home-manager/programs/sioyek
     ../../../home-manager/programs/lf
+    ../../../home-manager/programs/awscli
     ./hyprland
     ./swww
     # ./waybar
