@@ -6,6 +6,7 @@
     ./hardware-configuration.nix
     ../common/configuration.nix
     ./hydra.nix
+    inputs.solaar.nixosModules.default
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
@@ -15,6 +16,7 @@
   networking.hostName = "t5610";
   home-manager.users.nebu = import ./hm;
 
+  programs.solaar.enable = true;
 
   programs.hyprland = {
     enable = true;
@@ -33,8 +35,11 @@
     };
   };
 
+  services.ratbagd.enable = true;
   # programs.seahorse.enable = true;
   environment.systemPackages = with pkgs; [
+    piper
+    pavucontrol
     etcher
     pass-wayland
     qtpass

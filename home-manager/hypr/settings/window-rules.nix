@@ -14,7 +14,7 @@
       "float, class:^(thunderbird)$, title:^(Message Filters)$"
       "center, class:^(thunderbird)$, title:^(Message Filters)$"
       "animation popin, class:^(thunderbird)$, title:^(Message Filters)$"
-      "size 85%, class:^(thunderbird)$, title:^(Message Filters)$"
+      "size 70%, class:^(thunderbird)$, title:^(Message Filters)$"
     ];
   };
 }

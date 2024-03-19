@@ -29,6 +29,8 @@
     username = "nebu";
     homeDirectory = "/home/nebu";
     packages = with pkgs; [
+      krita
+      gimp
       thunderbird
       tree
       nix-output-monitor
