@@ -13,6 +13,7 @@
     ../../../home-manager/programs/mpv
     ../../../home-manager/programs/ytfzf
     # ../../../home-manager/programs/newsraft
+    ../../../home-manager/programs/newsboat
     ../../../home-manager/programs/firefox
     ../../../home-manager/programs/chromium
     ../../../home-manager/theme
