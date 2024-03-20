@@ -36,9 +36,8 @@
   };
 
   services.ratbagd.enable = true;
-  # programs.seahorse.enable = true;
   environment.systemPackages = with pkgs; [
-    piper
+    unstable.piper
     pavucontrol
     etcher
     pass-wayland
