@@ -37,6 +37,14 @@ in
         '';
       }
       {
+        plugin = t.continuum;
+        extraConfig = '''';
+      }
+      {
+        plugin = t.resurrect;
+        extraConfig = '''';
+      }
+      {
         plugin = t.mode-indicator;
         extraConfig = ''
           set -g @mode_indicator_prefix_prompt ' WAIT '
