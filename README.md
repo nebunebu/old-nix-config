@@ -1,4 +1,8 @@
-# My NixOs config
+# Archive Note
+
+I'm going to rewrite my setup.
+
+## My NixOs config
 
 Based off of the standard [starter-configs](https://github.com/Misterio77/nix-starter-configs).
 
